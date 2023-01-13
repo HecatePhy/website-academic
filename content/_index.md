@@ -44,6 +44,11 @@ sections:
       text:
     design:
       columns: '2'
+  - block: hero
+    content:
+      title: Hugo Academic Theme
+      image:
+        filename: hero-academic.png
   - block: features
     content:
       title: Skills
