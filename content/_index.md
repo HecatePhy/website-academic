@@ -292,6 +292,7 @@ sections:
     id: contact
     content:
       title: Contact
+      email: xiaohangao@pku.edu.cn
       address:
         street: 5 Yiheyuan Road
         city: Beijing
