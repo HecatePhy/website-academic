@@ -48,7 +48,8 @@ sections:
     content:
       title: Hugo Academic Theme
       image:
-        filename: hero-academic.png
+        filename: portrait.jpeg
+      text: **JUST A TEST**
 #  - block: features
 #    content:
 #      title: Skills
