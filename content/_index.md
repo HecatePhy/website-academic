@@ -42,19 +42,17 @@ sections:
       username: admin
       # Override your bio text from `authors/admin/_index.md`?
       text:
-    design:
-      columns: '2'
-  - block: hero
-    content:
-      title: Hugo Academic Theme
-      image:
-        filename: hero-academic.png
-      text: |-
-        **JUST A TEST**
-      social:
-        - icon: envelope
-          icon_pack: fas
-          link: '/#contact' 
+#  - block: hero
+#    content:
+#      title: Hugo Academic Theme
+#      image:
+#        filename: hero-academic.png
+#      text: |-
+#        **JUST A TEST**
+#      social:
+#        - icon: envelope
+#          icon_pack: fas
+#          link: '/#contact' 
 #  - block: features
 #    content:
 #      title: Skills
