@@ -288,4 +288,21 @@ sections:
 #          captcha: false
 #    design:
 #      columns: '2'
+  - block: contact
+    id: contact
+    content:
+      title: Contact
+      address:
+        street: 5 Yiheyuan Road
+        city: Beijing
+        region: Beijing
+        postcode: '100871'
+        country: China
+        country_code: CN
+      directions: Room 405, No.5 Science Building
+      contact_links:
+        - icon: telegram
+          icon_pack: fab
+          name: Telegram
+          link: 'https://t.me/hecatephy'
 ---
