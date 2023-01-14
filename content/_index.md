@@ -54,6 +54,7 @@ sections:
       social:
         - icon: envelope
           icon_pack: fas
+          link: '/#contact' 
 #  - block: features
 #    content:
 #      title: Skills
