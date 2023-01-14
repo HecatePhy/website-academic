@@ -51,6 +51,9 @@ sections:
         filename: hero-academic.png
       text: |-
         **JUST A TEST**
+      social:
+        - icon: envelope
+          icon_pack: fas
 #  - block: features
 #    content:
 #      title: Skills
