@@ -305,4 +305,6 @@ sections:
           icon_pack: fab
           name: Telegram
           link: 'https://t.me/hecatephy'
+    design:
+      columns: '2'
 ---
