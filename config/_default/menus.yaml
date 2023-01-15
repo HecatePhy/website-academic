@@ -6,7 +6,7 @@
 main:
   - name: Home
     #url: '#about'
-    url: 'pages/'
+    url: '/'
     weight: 10
   - name: Contact
     url: '#contact'
