@@ -6,7 +6,7 @@ title: 'Interactive Analog Layout Editing with Instant Placement Legalization'
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - [Mingjie Liu](https://jayl940712.github.io/)
+  - Mingjie Liu
   - David Z. Pan
   - Yibo Lin
 
