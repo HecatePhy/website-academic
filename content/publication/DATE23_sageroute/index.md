@@ -9,7 +9,7 @@ authors:
   - admin
   - Haoyang Luo
   - Jiahao Song
-  - [Xiyuan Tang](https://www.xtang.me/)
+  - Xiyuan Tang
   - Junhua Liu
   - Yibo Lin
   - Runsheng Wang

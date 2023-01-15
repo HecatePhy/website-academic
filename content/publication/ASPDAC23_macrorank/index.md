@@ -6,9 +6,9 @@ title: 'MacroRank: Ranking Macro Placement Solutions Leveraging Translation Equi
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - Yifan Chen
-  - [Jing Mai](https://magic3007.github.io/)
+  - Jing Mai
   - admin
-  - [Muhan Zhang](https://muhanzhang.github.io/)
+  - Muhan Zhang
   - Yibo Lin
 
 # Author notes (optional)
