@@ -34,10 +34,10 @@ interests:
 education:
   courses:
     - course: PhD in Computer Science
-      institution: Peking University
+      institution: School of Computer Science, Peking University
       year: 2020-2025
     - course: BSc in Computer Science
-      institution: Peking University
+      institution: Yuanpei College, Peking University
       year: 2016-2020
 
 # Social/Academic Networking
