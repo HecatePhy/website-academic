@@ -5,7 +5,6 @@ date: 2022-10-24
 #type: landing
 type: widget_page
 
----
 widget: about
 headless: true
 
@@ -13,6 +12,5 @@ title: bio
 weight: 10
 
 author: 'admin'
----
 
 ---
