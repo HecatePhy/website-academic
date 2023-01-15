@@ -6,17 +6,17 @@ sections:
   - block: portfolio
     id: otherworlds
     content:
-      title: élyséen
+      #title: élyséen
       #subtitle: My subtitle
-      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
+      #text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
       filters:
         # Folders to display content from
         folders:
           - otherworlds
         # Only show content with these tags
-        tags: []
+        #tags: []
         # Exclude content with these tags
-        exclude_tags: []
+        #exclude_tags: []
         # Which Hugo page kinds to show (https://gohugo.io/templates/section-templates/#page-kinds)
         kinds:
           - page
