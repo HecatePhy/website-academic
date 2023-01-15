@@ -18,7 +18,7 @@ authors:
 #  - 'Equal contribution'
 
 date: '2021-01-19T00:00:00Z'
-doi: 'https://doi.org/10.1145/3394885.3431545'
+doi: '10.1145/3394885.3431545'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2021-01-29T00:00:00Z'
@@ -48,14 +48,14 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
-url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-url_video: 'https://youtube.com'
+#url_pdf: ''
+url_code: 'https://github.com/HecatePhy/SymDetect.git'
+#url_dataset: ''
+#url_poster: ''
+#url_project: ''
+#url_slides: ''
+#url_source: 'https://github.com/wowchemy/wowchemy-hugo-themes'
+#url_video: 'https://youtube.com'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
