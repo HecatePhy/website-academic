@@ -10,8 +10,8 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: 'WTF'
-subtitle: 'WTF'
+title: 'élyséen'
+#subtitle: 'WTF'
 
 content:
   # Page type to display. E.g. project.
@@ -28,10 +28,12 @@ content:
   filter_button:
     - name: All
       tag: '*'
-    - name: Machine Learning
-      tag: Deep Learning
-    - name: Computer Vision
-      tag: Demo
+    - name: Travel
+      tag: travel
+    - name: Food
+      tag: food
+    - name: Other
+      tag: other
 
 design:
   columns: '1'
