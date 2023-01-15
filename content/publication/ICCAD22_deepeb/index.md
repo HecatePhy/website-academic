@@ -38,6 +38,8 @@ summary: Introduce neural PDE solver to lithography.
 
 tags: ['ML', 'lithography']
 
+categories: ['DFM']
+
 # Display this page in the Featured widget?
 featured: true
 

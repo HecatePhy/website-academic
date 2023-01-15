@@ -42,6 +42,8 @@ summary: Propose a interactive placement & routing framework for analog.
 
 tags: ['analog', 'placement', 'routing']
 
+categories: ['AMS']
+
 # Display this page in the Featured widget?
 featured: true
 

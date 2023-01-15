@@ -43,6 +43,8 @@ summary: A synergistic routing framework along with wire sizing for analog circu
 
 tags: ['routing', 'analog']
 
+categories: ['AMS']
+
 # Display this page in the Featured widget?
 featured: true
 

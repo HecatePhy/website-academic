@@ -38,6 +38,8 @@ summary: Interactive placement framework for analog circuit design.
 
 tags: ['analog', 'placement']
 
+categories: ['AMS']
+
 # Display this page in the Featured widget?
 featured: true
 

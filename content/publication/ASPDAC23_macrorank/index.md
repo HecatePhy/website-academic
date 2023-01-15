@@ -39,6 +39,8 @@ summary: Macro placement based on a GNN ranking system.
 
 tags: ['ML', 'placement', 'digital']
 
+categories: ['DIGITAL']
+
 # Display this page in the Featured widget?
 featured: true
 
