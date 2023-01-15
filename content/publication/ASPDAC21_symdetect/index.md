@@ -6,18 +6,22 @@ title: 'An example conference paper'
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - Robert Ford
+  - Chenhui Deng
+  - Mingjie Liu
+  - Zhiru Zhang
+  - David Z. Pan
+  - Yibo Lin
 
 # Author notes (optional)
-author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+#author_notes:
+#  - 'Equal contribution'
+#  - 'Equal contribution'
 
 date: '2013-07-01T00:00:00Z'
-doi: ''
+doi: 'https://doi.org/10.1145/3394885.3431545'
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2021-01-29T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -26,15 +30,15 @@ publishDate: '2017-01-01T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Wowchemy Conference*
-publication_short: In *ICW*
+publication: In *Proceedings of the 26th Asia and South Pacific Design Automation Conference*
+publication_short: In *ASPDAC'21*
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: The performance of analog circuits is susceptible to various layout constraints, such as symmetry, matching, etc. Modern analog placement and routing algorithms usually need to take these constraints as input for high quality solutions, while manually annotating such constraints is tedious and requires design expertise. Thus, automatic constraint annotation from circuit netlists is a critical step to analog layout automation. In this work, we propose a graph learning based framework to learn the general rules for annotation of the symmetry constraints with path-based feature extraction and label filtering techniques. Experimental results on the open-source analog circuit designs demonstrate that our framework is able to achieve significantly higher accuracy compared with the most recent works on symmetry constraint detection leveraging graph similarity and signal flow analysis techniques. The framework is general and can be extended to other pairwise constraints as well.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: Symmetry constraints annotation with GNN.
 
-tags: []
+tags: ['analog', 'ML']
 
 # Display this page in the Featured widget?
 featured: true
@@ -75,13 +79,3 @@ projects:
 #   Otherwise, set `slides: ""`.
 slides: example
 ---
-
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
-
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).
