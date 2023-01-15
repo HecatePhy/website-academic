@@ -9,10 +9,10 @@ main:
     weight: 10
   - name: Contact
     url: '#contact'
+    weight: 100
+  - name: Posts
+    url: '/post'
     weight: 20
-      #  - name: Posts
-      #    url: '#posts'
-      #    weight: 20
       #  - name: Projects
       #    url: '#projects'
       #    weight: 30
