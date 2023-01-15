@@ -1,5 +1,5 @@
 ---
-title: 'An example conference paper'
+title: 'Layout Symmetry Annotation for Analog Circuits with Graph Neural Networks'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -17,7 +17,7 @@ authors:
 #  - 'Equal contribution'
 #  - 'Equal contribution'
 
-date: '2013-07-01T00:00:00Z'
+date: '2021-01-19T00:00:00Z'
 doi: 'https://doi.org/10.1145/3394885.3431545'
 
 # Schedule page publish date (NOT publication's date).
