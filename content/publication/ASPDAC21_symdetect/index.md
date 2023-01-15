@@ -40,6 +40,8 @@ summary: Symmetry constraints annotation with GNN.
 
 tags: ['analog', 'ML']
 
+categories: ['Analog EDA']
+
 # Display this page in the Featured widget?
 featured: true
 
