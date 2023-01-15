@@ -1,4 +1,6 @@
 ---
+widget: about
+
 # Display name
 title: Xiaohan Gao 高笑涵
 
