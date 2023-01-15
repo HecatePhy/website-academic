@@ -1,30 +1,26 @@
 ---
-title: 'SAGERoute: Synergistic Analog Routing Considering Geometric and Electrical Constraints with Manual Design Compatibility'
+title: 'MacroRank: Ranking Macro Placement Solutions Leveraging Translation Equivariancy'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - Haoyi Zhang
+  - Yifan Chen
+  - Jing Mai
   - admin
-  - Haoyang Luo
-  - Jiahao Song
-  - Xiyuan Tang
-  - Junhua Liu
+  - Muhan Zhang
   - Yibo Lin
-  - Runsheng Wang
-  - Ru Huang
 
 # Author notes (optional)
-author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+#author_notes:
+#  - 'Equal contribution'
+#  - 'Equal contribution'
 
-date: '2023-04-17T00:00:00Z'
+date: '2023-01-19T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2023-01-14T00:00:00Z'
+publishDate: '2023-01-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -33,15 +29,15 @@ publishDate: '2023-01-14T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 2023 Conference & Exhibition on Design, Automation & Test in Europe*
-publication_short: In *DATE'23*
+publication: In *Proceedings of the 28th Asia and South Pacific Design Automation Conference*
+publication_short: In *ASPDAC'23*
 
 abstract:
 
 # Summary. An optional shortened abstract.
-summary: A synergistic routing framework along with wire sizing for analog circuit.
+summary: Macro placement based on a GNN ranking system.
 
-tags: ['routing', 'analog']
+tags: ['ML', 'placement', 'digital']
 
 # Display this page in the Featured widget?
 featured: true
