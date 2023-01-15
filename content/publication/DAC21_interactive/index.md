@@ -16,7 +16,7 @@ authors:
 #  - 'Equal contribution'
 
 date: '2021-11-08T00:00:00Z'
-doi: 'https://doi.org/10.1109/DAC18074.2021.9586234'
+doi: '10.1109/DAC18074.2021.9586234'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2021-11-08T00:00:00Z'
