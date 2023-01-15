@@ -8,11 +8,11 @@ sections:
     content:
       #title: élyséen
       #subtitle: My subtitle
-      #text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
+      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
       filters:
         # Folders to display content from
         folders:
-          - otherworlds
+          - joyland
         # Only show content with these tags
         #tags: []
         # Exclude content with these tags
