@@ -29,11 +29,9 @@ content:
     - name: All
       tag: '*'
     - name: Machine Learning
-      tag: ML
+      tag: Deep Learning
     - name: Computer Vision
-      tag: CV
-    - name: NLP
-      tag: NLP
+      tag: Demo
 
 design:
   columns: '1'
