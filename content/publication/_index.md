@@ -14,4 +14,4 @@ header:
   caption: ''
   image: ''
 ---
-{{< list_categories >}}
+#{{< list_categories >}}
