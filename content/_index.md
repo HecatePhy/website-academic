@@ -320,7 +320,7 @@ sections:
 widget: about
 headless: true
 
-title:
+title: bio
 weight: 10
 
 author: 'admin'
