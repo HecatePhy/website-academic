@@ -14,3 +14,4 @@ header:
   caption: ''
   image: ''
 ---
+{{< list_categories >}}
