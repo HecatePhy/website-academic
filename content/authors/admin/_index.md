@@ -33,12 +33,12 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in EDA
+    - course: PhD in Computer Science
       institution: Peking University
-      year: 2025
+      year: 2020-2025
     - course: BSc in Computer Science
       institution: Peking University
-      year: 2020
+      year: 2016-2020
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons

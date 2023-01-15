@@ -17,20 +17,6 @@ content:
 
   # Contact details (edit or remove options as required)
   email: xiaohangao@pku.edu.cn
-  address:
-    street: 5 Yiheyuan Road
-    city: Beijing
-    region: Beijing
-    postcode: '100871'
-    country: China
-    country_code: CN
-  directions: Room 405, No.5 Science Building
-  contact_links:
-    - icon: telegram
-    icon_pack: fab
-    name: Telegram
-    link: 'https://t.me/hecatephy'
-
 
 design:
   columns: '2'
