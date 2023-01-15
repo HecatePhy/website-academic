@@ -315,3 +315,13 @@ sections:
     design:
       columns: '2'
 ---
+
+---
+widget: about
+headless: true
+
+title:
+weight: 10
+
+author: 'admin'
+---
