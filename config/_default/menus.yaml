@@ -5,8 +5,7 @@
 
 main:
   - name: Home
-    #url: '#about'
-    url: '/'
+    url: '#about'
     weight: 10
   - name: Contact
     url: '#contact'
