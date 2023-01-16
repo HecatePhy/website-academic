@@ -21,7 +21,10 @@ main:
     weight: 40
   - name: Otherworlds
     url: '/otherworlds'
-    weight: 200
+    weight: 90
+  - name: Blogs
+    url: 'blog.gaoxiaohan.com'
+    weight: 80
       #  - name: Projects
       #    url: '#projects'
       #    weight: 30
