@@ -1,6 +1,6 @@
 ---
 title: PAPRIKA-AMS
-summary: "PAPRIKA-AMS: A novel framework of analog layout automation."
+summary: 'PAPRIKA-AMS: A novel framework of analog layout automation.'
 tags:
   - analog 
 date: '2023-01-01T00:00:00Z'
@@ -9,7 +9,7 @@ date: '2023-01-01T00:00:00Z'
 external_link: ''
 
 image:
-  caption: *Paprika* a film by Satoshi Kon
+  caption: '[*Paprika*](https://www.imdb.com/title/tt0851578/) a film by Satoshi Kon'
   focal_point: Smart
 
 links:
