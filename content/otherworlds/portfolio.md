@@ -32,6 +32,12 @@ content:
       tag: travel
     - name: Food
       tag: food
+    - name: Boardgame
+      tag: boardgame
+    - name: ACGN
+      tag: acgn
+    - name: Art
+      tag: art
     - name: Other
       tag: other
 
