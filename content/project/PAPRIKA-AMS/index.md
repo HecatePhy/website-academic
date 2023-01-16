@@ -9,7 +9,7 @@ date: '2023-01-01T00:00:00Z'
 external_link: ''
 
 image:
-  caption: Paprika: a film by Satoshi Kon
+  caption: Paprika a film by Satoshi Kon
   focal_point: Smart
 
 links:
@@ -27,6 +27,6 @@ links:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+#slides: example
 ---
 
