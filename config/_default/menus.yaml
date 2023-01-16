@@ -19,12 +19,17 @@ main:
   - name: Projects
     url: '/project'
     weight: 40
+  - name: Personal
+    identifier: personal
+    weight: 200
   - name: Otherworlds
+    parent: personal
     url: '/otherworlds'
-    weight: 90
+    weight: 20
   - name: Blogs
-    url: 'blog.gaoxiaohan.com'
-    weight: 80
+    parent: personal
+    url: 'https://gaoxiaohan.com/'
+    weight: 10
       #  - name: Projects
       #    url: '#projects'
       #    weight: 30
