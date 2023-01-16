@@ -25,11 +25,19 @@ main:
   - name: Otherworlds
     parent: personal
     url: '/otherworlds'
-    weight: 20
+    weight: 40
   - name: Blogs
     parent: personal
-    url: 'https://gaoxiaohan.com/'
+    url: 'https://blog.gaoxiaohan.com/'
     weight: 10
+  - name: Team
+    parent: personal
+    url: '/team'
+    weight: 20
+  - name: Connectivity
+    parent: personal
+    url: '/friend'
+    weight: 30
       #  - name: Projects
       #    url: '#projects'
       #    weight: 30
