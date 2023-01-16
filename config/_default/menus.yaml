@@ -16,6 +16,9 @@ main:
   - name: Publications
     url: '/publication'
     weight: 30
+  - name: Projects
+    url: '/project'
+    weight: 40
   - name: Otherworlds
     url: '/otherworlds'
     weight: 200
