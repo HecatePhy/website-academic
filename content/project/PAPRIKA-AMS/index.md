@@ -1,6 +1,6 @@
 ---
 title: PAPRIKA-AMS
-summary: PAPRIKA-AMS \: A novel framework of analog layout automation.
+summary: "PAPRIKA-AMS : A novel framework of analog layout automation."
 tags:
   - analog 
 date: '2023-01-01T00:00:00Z'
