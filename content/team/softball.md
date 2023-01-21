@@ -3,11 +3,18 @@ widget: blank
 headless: true
 
 # ... Put Your Section Options Here (title etc.) ...
-title: Softball
+title: EECS Softball Team
 subtitle:
 weight: 10  # section position on page
 
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
-  columns: '1'
+  columns: '2'
 ---
+
+I join the EECS softball team in Fall 2020.
+Now our team has become EECS and CS United 😆.
+
+We won the championship of the PKU Cup.
+
+![PKUCUP](team/pkucup.JPG "PKU CUP Championship!")
