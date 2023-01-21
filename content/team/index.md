@@ -1,16 +1,7 @@
 ---
-# Page title
-title: Softball
-# Page type - we want a landing page (such as a homepage)
-type: landing
-
-# Your landing page sections - add as many different content blocks as you like
-#sections:
-#  - block: markdown
-#    id: section-1
-#    content:
-#      title: Section 1
-#      subtitle: A subtitle
-#      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
+title: "Team"  # Add a page title.
+summary: "teams"  # Add a page description.
+date: "2023-01-01"  # Add today's date.
+type: "widget_page"  # Page type is a Widget Page
 ---
 
