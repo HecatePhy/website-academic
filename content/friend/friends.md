@@ -18,6 +18,6 @@ Please check their wonderful work!
 
 [Xu Sensei](https://witty-me.github.io/) is a friend from a group next door.
 He is always willing to share the latest progress in his field and discuss.
-Also he is very popular for his generosity and humor (he provides a steady stream of coffee and snacks).
-We belong to the same roadbike club.
+He is very popular for his generosity and humor (he provides a steady stream of coffee and snacks).
+We belong to the same curling club.
 Please check his work in *wireless communication* and *wireless sensing*!
