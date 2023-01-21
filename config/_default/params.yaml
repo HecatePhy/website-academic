@@ -18,10 +18,10 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'Xiaohan Gao Personal Website.'
+    twitter: ''
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-SX8SNSVECP'
     baidu_tongji: ''
   verification:
     google: ''
