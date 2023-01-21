@@ -15,4 +15,4 @@ design:
 I also play for the school slow-pitch softball team.
 Thanks to my super teammates, I was lucky enough to win the champion of the Beijing Regional Competition! 
 
-![PKUCUP](team/beijingregional.JPG "Beijing Regional Championship!")
+![PKUCUP](team/beijingregional.JPG "Beijing Regional Championship 2021!")
