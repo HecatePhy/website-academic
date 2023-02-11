@@ -1,6 +1,6 @@
 ---
 title: xx
-summary: An example of using the in-built project page.
+summary: xx.
 tags:
   - Travel
 date: '2023-02-10T00:00:00Z'
