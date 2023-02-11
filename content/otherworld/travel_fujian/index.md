@@ -1,5 +1,5 @@
 ---
-title: 八闽  
+title: xx
 summary: An example of using the in-built project page.
 tags:
   - Travel
@@ -9,7 +9,7 @@ date: '2023-02-10T00:00:00Z'
 external_link: ''
 
 image:
-  caption: 泉州承天寺
+  caption: xxx
   focal_point: Smart
 
 links:
