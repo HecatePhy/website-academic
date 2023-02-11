@@ -1,6 +1,6 @@
 ---
-title: xx
-summary: xx.
+title: "八闽"
+summary: 23年年初奇怪的民俗旅行.
 tags:
   - Travel
 date: '2023-02-10T00:00:00Z'
@@ -9,7 +9,7 @@ date: '2023-02-10T00:00:00Z'
 external_link: ''
 
 image:
-  caption: xxx
+  caption: "泉州承天寺：香火"
   focal_point: Smart
 
 links:
