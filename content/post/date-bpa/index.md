@@ -10,10 +10,10 @@ featured: false
 image:
   caption: 'Image credit: [DATE](https://www.linkedin.com/posts/robertwille_date2023-activity-7054227883841474560-L2lZ?utm_source=share&utm_medium=member_desktop)'
 authors:
-  - xiaohan
-tags:
-  - analog
-  - conference
-categories:
-  - AMS
+  - admin
+tags: ['analog', 'conference']
+categories: ['AMS']
 ---
+
+I am very excited that my co-first authored paper *SAGERoute: Synergistic Analog Routing Considering Geometric and Electrical Constraints with Manual Design Compatibility* has been selected as the [DATE2023 Best Paper Award](https://www.date-conference.com/awards) of T-Track!
+Thanks a lot to all my co-authors and the DATE community!
