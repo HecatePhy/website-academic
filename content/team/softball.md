@@ -17,4 +17,6 @@ Now our team has become EECS and CS United 😆.
 
 We won the championship of the PKU Cup in Spring 2022!
 
+The story is not finished. We won the third place of the Freshman Cup in Spring 2023.
+
 ![PKUCUP](team/pkucup.JPG "PKU CUP Championship 2022!")
