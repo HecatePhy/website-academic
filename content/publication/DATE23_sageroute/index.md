@@ -34,7 +34,7 @@ publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 2023 Conference & Exhibition on Design, Automation & Test in Europe*
-publication_short: In *DATE'23* $\color{red}{Best Paper Award}$
+publication_short: 'In *DATE'23* $\color{red}{Best Paper Award}$'
 
 abstract:
 
