@@ -44,7 +44,7 @@ links:
 
 ![queue](Shanghai_2.jpg)
 
-二次元浓度过高，Mao Livehouse的阿宅之夜：
+二次元浓度过高，Mao Livehouse的阿宅之夜（thx许老师）：
 
 ![maolivehouse](Shanghai_3.jpg)
 
