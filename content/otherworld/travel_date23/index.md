@@ -36,7 +36,7 @@ We landed in Bruxelles.
 
 Manneken Pis, the most famous landmark in Bruxelles:
 
-![Manneken Pis](Bruxelles.jpeg)
+![Manneken Pis](Bruxelles.jpg)
 
 We were not able to see the classic bronze skin.
 He was dressed in Easter Day attire.
@@ -51,11 +51,11 @@ My French speaking successfully confused the waiter to the point that he switche
 
 Museum Aande Stroom (MAS) is located on the banks of the Scheldt River:
 
-![Antwerp MAS](Antwerpen_0.jpeg)
+![Antwerp MAS](Antwerpen_0.jpg)
 
 There were many strange and funny exhibits:
 
-![Smiling Guy](Antwerpen_1.jpeg)
+![Smiling Guy](Antwerpen_1.jpg)
 
 Some exhibits there were only introduced in Dutch.
 I could barely understand partial descriptions if there were French versions.
@@ -64,11 +64,11 @@ Antwerp has many beautiful restaurants.
 
 A bar with retro style:
 
-![Bar](Antwerpen_2.jpeg)
+![Bar](Antwerpen_2.jpg)
 
 A restaurant serving traditional Antwerp food:
 
-![Restaurant](Antwerpen_3.jpeg)
+![Restaurant](Antwerpen_3.jpg)
 
 Although the restaurants are cute, they did not satisfy my craving for Chinese cuisine.
 
@@ -87,7 +87,7 @@ Very beautiful.
 
 This is a combination of toilet and urinal:
 
-![Urinal](Amsterdam.jpeg)
+![Urinal](Amsterdam.jpg)
 
 I met this installation in the Red Light District.
 Culture shock😆!
