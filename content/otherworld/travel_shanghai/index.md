@@ -38,17 +38,17 @@ links:
 
 白天喝咖啡，晚上喝酒，太刺激了：
 
-![drink](Shanghai_1.jpeg)
+![drink](Shanghai_1.jpg)
 
 排队，真的有人喜欢排队嘛：
 
-![queue](Shanghai_2.jpeg)
+![queue](Shanghai_2.jpg)
 
 二次元浓度过高，Mao Livehouse的阿宅之夜：
 
-![maolivehouse](Shanghai_3.jpeg)
+![maolivehouse](Shanghai_3.jpg)
 
 回家过端午之前还去了一趟黄山。
 梅雨季节，能见度十米。换个季节吧：
 
-![yingkesong](Huangshan.jpeg)
+![yingkesong](Huangshan.jpg)
