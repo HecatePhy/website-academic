@@ -34,7 +34,7 @@ links:
 
 租界：
 
-![old_shanghai](Shanghai_0.jpeg)
+![old shanghai](./Shanghai_0.jpeg)
 
 白天喝咖啡，晚上喝酒，太刺激了：
 
