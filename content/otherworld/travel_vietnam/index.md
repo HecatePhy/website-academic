@@ -9,7 +9,7 @@ date: '2023-07-18T00:00:00Z'
 external_link: ''
 
 image:
-  caption: ""
+  caption: "Hanoi: Vue de rue chaotique"
   focal_point: Smart
 
 links:
