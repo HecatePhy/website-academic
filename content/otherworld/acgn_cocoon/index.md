@@ -9,7 +9,7 @@ date: '2023-12-04T00:00:00Z'
 external_link: ''
 
 image:
-  caption: ""
+  caption: "Cocoon：封面即谜底"
   focal_point: Smart
 
 links:
