@@ -37,7 +37,7 @@ abstract: Automating analog layout design has long been considered a challenging
 # Summary. An optional shortened abstract.
 summary: Survey on recent intelligent and interactive analog layout tools.
 
-tags: ['analog', 'sruvey']
+tags: ['analog', 'survey']
 categories: ['SURVEY']
 
 # Display this page in the Featured widget?
