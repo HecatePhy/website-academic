@@ -83,5 +83,5 @@ email: ''
 highlight_name: true
 ---
 
-I am a third-year PhD student at [CECA](https://ceca.pku.edu.cn/), Peking University, advised by Prof. [Yibo Lin](https://yibolin.com/). My research interests include AMS circuit design automation, EDA algorithms, and programming language in EDA.
+I am a fourth-year PhD student at [CECA](https://ceca.pku.edu.cn/), Peking University, advised by Prof. [Yibo Lin](https://yibolin.com/). My research interests include AMS circuit design automation, EDA algorithms, and programming language in EDA.
 {style="text-align: justify;"}
