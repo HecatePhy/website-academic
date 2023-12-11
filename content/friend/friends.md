@@ -16,8 +16,10 @@ Besides, MagicMai is not only my colleague but also my teammate in the Softball 
 They are rising stars of EDA research.
 Please check their wonderful work!
 
-[Xu Sensei](https://witty-me.github.io/) is a friend from a group next door.
-He is always willing to share the latest progress in his field and discuss.
-He is very popular for his generosity and humor (he provides a steady stream of coffee and snacks).
-We belong to the same curling club.
+[Xu](https://witty-me.github.io/) and [CK](https://www.chengke.wang/) are friends from a group next door.
+Xu is always willing to share the latest progress in his field.
+Also he is very popular for his generosity and humor (he provides a steady stream of coffee and snacks).
 Please check his work in *wireless communication* and *wireless sensing*!
+CK is good at system things, and I think he is the King of Internship.
+He is an awesome researcher in computer network.
+Go check his blogs!
