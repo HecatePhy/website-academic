@@ -132,7 +132,7 @@ Ephesus还有雕梁画栋的图书馆，以及现在看不太出来的大浴场�
 
 因为我没有看到地理杂志般的风景，请看客移步地理杂志。
 
-## Fethiye
+## Fethiye & Kas
 
 又回到了美丽的地中海畔。
 
@@ -145,9 +145,22 @@ Ephesus还有雕梁画栋的图书馆，以及现在看不太出来的大浴场�
 
 欣赏一下梦幻的海水。
 
-## Kas
-
 ## Demre
+
+圣尼古拉斯教堂（圣诞老人原型）。
+
+![saint_nicholas](saint_nicholas.jpg)
+
+传说圣尼古拉斯因能治愈疾病而闻名，因此他的圣遗骸遭盗墓贼的觊觎而被多次盗走...
+
+![saint_nicholas_mural](saint_nicholas_mural.jpg)
+
+教堂有很多壁画，可惜我没有上过宗教学导论？
+这里是东正教的圣地，因此几乎全是俄罗斯游客。
+
+附送我很喜欢的o型嘴雕塑：
+
+![o_statue](o_statue.jpg)
 
 ## Antalya
 
