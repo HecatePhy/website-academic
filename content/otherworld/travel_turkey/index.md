@@ -41,20 +41,7 @@ links:
 
 圣索菲亚大清真寺：
 
-<center>
-  <img src="./ayasofya_outside.jpg" width="30%" />
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <img src="./ayasofya_inside.jpg" width="30%" />
-  <br/>
-  <font color="AAAAAA">外观</font>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <font color="AAAAAA">内部</font>
-</center>
-<br/>
-
-test             |  test
+             |  
 :-------------------------:|:-------------------------:
 ![](ayasofya_outside.jpg)  |  ![](ayasofya_inside.jpg)
 
