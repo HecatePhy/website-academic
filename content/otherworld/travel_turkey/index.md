@@ -43,9 +43,9 @@ links:
 
 </br>
 
-        Outside | Inside
-:-------------------------:|:-------------------------:
-![](ayasofya_outside.jpg)  |  ![](ayasofya_inside.jpg)
+|        Outside | Inside |
+|:-------------------------:|:-------------------------:|
+| ![](ayasofya_outside.jpg)  |  ![](ayasofya_inside.jpg) |
 
 此行最最最最重要的目的地之一，目前重新改为清真寺，被称为Aya Sofya。
 博物馆时期是要门票的，目前是游客可以在一天中一半的时间自由进入。
