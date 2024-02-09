@@ -57,14 +57,35 @@ links:
 ![ayasofya](./ayasofya_strait.jpg)
 
 伊斯坦布尔的博物馆实在是太多太多！
-恨不得把照片都放上来，但是还是请参见[MuseumPass](https://muze.gen.tr/MuseumPasses)。
+恨不得把照片都放上来，但是还是请参见 [MuseumPass](https://muze.gen.tr/MuseumPasses)。
 附送从Galata Tower拍摄的伊斯坦布尔夜景（iPhone的夜景模式和我的摄影水平很难说谁更拉）：
 
 | Asia | Europe |
 |:-:|:-:|
 |![](./istanbul_night0.jpg) | ![](./istanbul_night1.jpg) |
 
+亚洲侧（伊斯坦布尔）；欧洲侧（康斯坦丁尼耶）。
+
+关于食物，红茶好喝，土耳其咖啡好喝，kebab好香，水烟好香，石榴汁可怕。
+
+![turkish_coffee](./turkish_coffee.jpg)
+
 ## Izmir
+
+坐了低空飞行的飞机到Izmir，爱琴海边。
+
+古罗马文明城市Ephesus：
+
+![ephesus](ephesus.jpg)
+
+没错我不是胡编，Ephesus有块碑文的翻译就是说自己在罗马内部成为了（？）文明城市。
+这是Ephesus的市政厅的-1层，是它的商业市场，地下巴扎？
+这个泉水疑似是商业市场的自来水。
+实在是太发达了，精罗程度50%。
+
+附送我超级喜欢的标志，土耳其的标志都画的好动感啊：
+
+![sign](sign.jpg)
 
 ## Selçuk
 
