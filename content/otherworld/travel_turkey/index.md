@@ -42,7 +42,7 @@ links:
 圣索菲亚大清真寺：
 
 <center>
-  <img src="./ayasofya_outside.jpg" width="40%" />
+  <img src="./ayasofya_outside.jpg" width="30%" />
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
   <img src="./ayasofya_inside.jpg" width="30%" />
   <br/>
