@@ -41,6 +41,7 @@ links:
 
 圣索菲亚大清真寺：
 
+
         Outside | Inside
 :-------------------------:|:-------------------------:
 ![](ayasofya_outside.jpg)  |  ![](ayasofya_inside.jpg)
