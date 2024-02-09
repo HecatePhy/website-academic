@@ -54,6 +54,8 @@ links:
 </center>
 <br/>
 
+![ayasofya_outside](./ayasofya_outside.jpg "外观") ![ayasofya_inside](./ayasofya_inside.jpg "内部")
+
 此行最最最最重要的目的地之一，目前重新改为清真寺，被称为Aya Sofya。
 博物馆时期是要门票的，目前是游客可以在一天中一半的时间自由进入。
 从蓝色清真寺出来，远远地看到粉色的外墙，仿佛身处北非。
