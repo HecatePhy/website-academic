@@ -56,6 +56,14 @@ links:
 
 ![ayasofya](./ayasofya_strait.jpg)
 
+伊斯坦布尔的博物馆实在是太多太多！
+恨不得把照片都放上来，但是还是请参见[MuseumPass](https://muze.gen.tr/MuseumPasses)。
+附送从Galata Tower拍摄的伊斯坦布尔夜景（iPhone的夜景模式和我的摄影水平很难说谁更拉）：
+
+| Asia | Europe |
+|:-:|:-:|
+|![](./istanbul_night0.jpg) | ![](./istanbul_night1.jpg) |
+
 ## Izmir
 
 ## Selçuk
