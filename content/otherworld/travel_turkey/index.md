@@ -96,9 +96,13 @@ Selçuk有土耳其最负盛名的遗址Ephesus。
 ![theatre_far](theatre_far.jpg)
 ![theatre_over](theatre_over.jpg)
 
-这是Ephesus的大剧场，每个走进来的人第一眼都会被它吸引住，真是宏伟啊！
+这是Ephesus的大剧场，每个走进Ephesus的人，第一眼都会被它吸引住，真是宏伟啊！
 从剧院往下看，能看到当时通向海边码头的大道，也是十分宏伟。
 我从未见过如此宏伟的城市，精罗程度100%。
+
+Ephesus还有雕梁画栋的图书馆，以及现在看不太出来的大浴场。
+
+![library](library.jpg)
 
 ## Bodrum
 
