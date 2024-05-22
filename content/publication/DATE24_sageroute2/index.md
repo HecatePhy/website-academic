@@ -1,5 +1,5 @@
 ---
-title: 'SAGERoute: Synergistic Analog Routing Considering Geometric and Electrical Constraints with Manual Design Compatibility'
+title: 'SAGERoute 2.0: Hierarchical Analog and Mixed Signal Routing Considering Versatile Routing Scenarios'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
@@ -7,24 +7,24 @@ title: 'SAGERoute: Synergistic Analog Routing Considering Geometric and Electric
 authors:
   - Haoyi Zhang
   - admin
-  - Haoyang Luo
+  - Zilong Shen
   - Jiahao Song
+  - Xiaoxu Cheng
   - Xiyuan Tang
-  - Junhua Liu
   - Yibo Lin
   - Runsheng Wang
   - Ru Huang
 
 # Author notes (optional)
-author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+#author_notes:
+#  - 'Equal contribution'
+#  - 'Equal contribution'
 
-date: '2023-04-17T00:00:00Z'
-doi: '10.23919/DATE56975.2023.10137296'
+date: '2024-03-24T00:00:00Z'
+doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2023-01-14T00:00:00Z'
+publishDate: '2024-03-24T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -33,13 +33,13 @@ publishDate: '2023-01-14T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 2023 Conference & Exhibition on Design, Automation & Test in Europe*
-publication_short: In *DATE'23* <span style="color:red">(Best Paper Award)</span>
+publication: In *Proceedings of the 2024 Conference & Exhibition on Design, Automation & Test in Europe*
+publication_short: In *DATE'24* 
 
-abstract: Routing is critical to the post-layout performance of analog circuits. As modern analog layouts need to consider both geometric constraints (e.g., design rules and low bending constraints) and electrical constraints (e.g., electromigration (EM), IR drop, symmetry, etc.), it becomes increasingly challenging to investigate the complicated design space. Most previous work has focused only on geometric constraints or basic electrical constraints, lacking holistic and systematic investigation. Such an approach is far from typical manual design practice and can not guarantee post-layout performance on real-world designs. In this work, we propose SAGERoute, a synergistic routing framework taking both geometric and electrical constraints into consideration. Through Steiner tree based wire sizing and guided detailed routing, the framework can generate high-quality routing solutions efficiently under versatile constraints on real-world analog designs.
+abstract:
 
 # Summary. An optional shortened abstract.
-summary: A synergistic routing framework along with wire sizing for analog circuit.
+summary: Hierarchical routing considering mixed signal routing (similar to bus routing).
 
 tags: ['routing', 'analog']
 
