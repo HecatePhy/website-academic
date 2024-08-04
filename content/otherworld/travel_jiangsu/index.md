@@ -69,8 +69,55 @@ links:
 
 |豆腐|点心|肉|
 |:-:|:-:|:-:|
-|[gansi](gansi.jpg)|[feicuishaomai](feicuishaomai.jpg)|[laoe](laoe.jpg)|
-|[wensi](wensi.jpg)|[shizitou](shizitou.jpg)|[shan](shan.jpg)|
+|![gansi](gansi.jpg)|![feicuishaomai](feicuishaomai.jpg)|![laoe](laoe.jpg)|
+|![wensi](wensi.jpg)|![shizitou](shizitou.jpg)|![shan](shan.jpg)|
 
 ## 南京
 
+从扬州坐高铁到南京，中途过南京长江大桥，唯见长江天际流！
+以前坐车常从武汉过长江，但是第一次横跨长江的下游，真是心胸激荡，若我是诗人必须要吟诗作赋了。
+大家若在南京，定要登临览胜一番呀。
+
+夏天白日漫长，恨不得景区都是夜间开放。
+秦淮河是夜游胜地，大家都是想一见桨声灯影里的秦淮河。
+因为大家都是这样想的，夫子庙门口确实人山人海，完全是被人群挤上游船的。
+不过游船本身还不错，吹着空调听电子音念诗，优哉游哉。
+三山半落青天外，二水中分白鹭洲，从夫子庙向东过白鹭洲公园：
+
+![bailuzhou](bailuzhou.jpg)
+
+总统府，鸡鸣寺，一切都雨打风吹去了。
+
+|天下为公|革命尚未成功|
+|:-:|:-:|
+|![tianxiaweigong](tianxiaweigong.jpg)|![geming](geming.jpg)|
+
+红山动物园，下班了也不赶人，享受了没什么人的清静下午：
+
+|熊|猫|鸟|
+|:-:|:-:|:-:|
+|![panda](panda.jpg)|![tiger](tiger.jpg)|![bird](bird.jpg)|
+
+因为染红发还被红猩猩认作同类了：
+
+|暗中观察|微微一笑|
+|:-:|:-:|
+|![anzhongguancha](anzhongguancha.jpg)|![weiweiyixiao](weiweiyixiao.jpg)|
+
+玄武湖，夜间全是散步的市民，要是允许环湖骑行该多好。
+从玄武湖远眺，逶迤带绿水，迢递起朱楼：
+
+|南京站|明城墙|
+|:-:|:-:|
+|![nanjingzhan](nanjingzhan.jpg)|![mingchengqiang](mingchengqiang.jpg)|
+
+钟山，大家最爱的埋骨之所。
+还有奇怪的孙权博物馆，这个博物馆对于最早定都金陵的皇帝还是十分宽容。
+
+|明孝陵|中山陵|灵谷寺纪念堂|
+|:-:|:-:|:-:|
+|![mingxiaoling](mingxiaoling.jpg)|![zhongshanling](zhongshanling.jpg)|![linggusi](linggusi.jpg)|
+
+彩蛋，这到底是什么水果呀：
+
+![fruit](fruit.jpg)
