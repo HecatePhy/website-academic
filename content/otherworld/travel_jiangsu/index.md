@@ -34,6 +34,7 @@ links:
 感谢上海朋友们的接待，私房菜好吃，菊花汽水也别有一番风味。
 一起去做了手工，我快速成为卡林巴琴手。
 去了猎人人广店，好耶（无照片但是和其他所有猎人完全一致）。
+
 太热了，从虹桥站紧急跑路，路过了LPL的上海主场，地下视角的一张仰视图（下次来看比赛吧，好方便的地理位置）：
 
 ![lpl](lpl.jpg)
@@ -67,7 +68,7 @@ links:
 看看我吃了些什么：
 
 |豆腐|点心|肉|
-|:-:|:-:|
+|:-:|:-:|:-:|
 |[gansi](gansi.jpg)|[feicuishaomai](feicuishaomai.jpg)|[laoe](laoe.jpg)|
 |[wensi](wensi.jpg)|[shizitou](shizitou.jpg)|[shan](shan.jpg)|
 
