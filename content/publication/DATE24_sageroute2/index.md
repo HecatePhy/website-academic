@@ -21,7 +21,7 @@ authors:
 #  - 'Equal contribution'
 
 date: '2024-03-24T00:00:00Z'
-doi: ''
+doi: '10.23919/DATE58400.2024.10546542'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2024-03-24T00:00:00Z'
@@ -36,7 +36,7 @@ publication_types: ['1']
 publication: In *Proceedings of the 2024 Conference & Exhibition on Design, Automation & Test in Europe*
 publication_short: In *DATE'24* 
 
-abstract:
+abstract: Recent advances in analog and mixed-signal (AMS) circuit applications call for a shorter design cycle and time-to-market period. Routing is one of the most time-consuming and tedious steps in the AMS design cycle. A modern AMS routing should simultaneously consider versatile routing scenarios (e.g., analog routing, digital routing, inter-analog-digital routing) to shoot for outstanding performance. Most previous studies only focus on one of the routing scenarios and ignore the synergism among different routing scenarios, lacking holistic and systematic investigation. In this work, we propose a hierarchical routing engine to handle the complex routing requirements in AMS circuits. By leveraging the carefully designed routing kernels hierarchically, the framework can generate high-quality routing solutions for real-world AMS circuits.
 
 # Summary. An optional shortened abstract.
 summary: Hierarchical routing considering mixed signal routing (similar to bus routing).
