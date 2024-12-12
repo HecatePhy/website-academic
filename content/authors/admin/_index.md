@@ -57,8 +57,8 @@ social:
 #  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
 #    icon_pack: fas
 #    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: google-scholar
-    icon_pack: ai
+  - icon: fa-google-scholar
+    icon_pack: fab
     link: https://scholar.google.com/citations?user=OUQ0CX4AAAAJ
   - icon: github
     icon_pack: fab
@@ -73,7 +73,7 @@ social:
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
   - icon: cv
-    icon_pack: fas
+    icon_pack: ai
     link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
