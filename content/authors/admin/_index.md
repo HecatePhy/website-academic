@@ -67,7 +67,7 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/in/xiaohan-gao-911aba1b9/
   - icon: orcid
-    icon_pack: brands
+    icon_pack: fab
     link: https://orcid.org/0000-0001-6201-6110
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
