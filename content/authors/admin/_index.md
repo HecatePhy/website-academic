@@ -58,7 +58,7 @@ social:
 #    icon_pack: fas
 #    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: google-scholar
-    icon_pack: fab
+    icon_pack: academicons
     link: https://scholar.google.com/citations?user=OUQ0CX4AAAAJ
   - icon: github
     icon_pack: fab
