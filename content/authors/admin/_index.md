@@ -70,7 +70,7 @@ social:
     icon_pack: fab
     link: https://orcid.org/0000-0001-6201-6110
   - icon: cv
-    icon_pack: academicons
+    icon_pack: fa
     link: uploads/resume.pdf
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
@@ -88,5 +88,5 @@ highlight_name: true
 
 I am a fifth-year PhD student at [CECA](https://ceca.pku.edu.cn/), Peking University, advised by Prof. [Yibo Lin](https://yibolin.com/). My research interests include AMS circuit design automation, EDA algorithms, and programming language in EDA.
 
-I am currently a PhD candidate and expect to graduate in 2025. I'm exploring job opportunities and here attaches my [CV](). Feel free to contact me via email.
+I am currently a PhD candidate and expect to graduate in 2025. I'm exploring job opportunities and here attaches my [CV](uploads/resume.pdf). Feel free to contact me via email.
 {style="text-align: justify;"}
