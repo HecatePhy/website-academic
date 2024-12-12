@@ -69,12 +69,14 @@ social:
   - icon: orcid
     icon_pack: fab
     link: https://orcid.org/0000-0001-6201-6110
+  - icon: academicons/cv
+    link: uploads/resume.pdf
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
-  - icon: academicons/cv
-    #icon_pack: ai
-    link: uploads/resume.pdf
+  #- icon: academicons/cv
+  #  icon_pack: ai
+  #  link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
