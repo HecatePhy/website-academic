@@ -44,8 +44,7 @@ education:
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
-#social:
-profiles:
+social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
@@ -70,7 +69,8 @@ profiles:
   - icon: orcid
     icon_pack: fab
     link: https://orcid.org/0000-0001-6201-6110
-  - icon: academicons/cv
+  - icon: cv
+    icon_pack: academicons
     link: uploads/resume.pdf
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
