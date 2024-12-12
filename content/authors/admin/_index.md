@@ -44,7 +44,8 @@ education:
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
-social:
+#social:
+profiles:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
@@ -87,5 +88,5 @@ highlight_name: true
 
 I am a fifth-year PhD student at [CECA](https://ceca.pku.edu.cn/), Peking University, advised by Prof. [Yibo Lin](https://yibolin.com/). My research interests include AMS circuit design automation, EDA algorithms, and programming language in EDA.
 
-I am currently a PhD candidate and expect to graduate in 2025. I'm exploring job opportunities. Feel free to contact me via email.
+I am currently a PhD candidate and expect to graduate in 2025. I'm exploring job opportunities and here attaches my [CV](). Feel free to contact me via email.
 {style="text-align: justify;"}
