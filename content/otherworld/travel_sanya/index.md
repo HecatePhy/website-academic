@@ -9,7 +9,7 @@ date: '2025-02-01T00:00:00Z'
 external_link: ''
 
 image:
-  caption: ""
+  caption: "海滩，烟花，和人群"
   focal_point: Smart
 
 links:
