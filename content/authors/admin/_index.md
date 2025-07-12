@@ -86,7 +86,11 @@ email: ''
 highlight_name: true
 ---
 
-I am a fifth-year PhD student at [CECA](https://ceca.pku.edu.cn/), Peking University, advised by Prof. [Yibo Lin](https://yibolin.com/). My research interests include AMS circuit design automation, EDA algorithms, and programming language in EDA.
+I am currently a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/).
+Also, I work as part of [TILOS](https://tilos.ai/).
+My research interests include optimization algorithms, machine learning for EDA, programming language, and AMS circuit design automation. 
 
-I am currently a PhD candidate and expect to graduate in 2025. I'm exploring job opportunities and here attaches my [CV](uploads/resume.pdf). Feel free to contact me via email.
+Previously, I obtained my PhD degree from Peking University, where I was working at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
+
+I'm exploring job opportunities and here attaches my [CV](uploads/resume.pdf). Feel free to contact me via email.
 {style="text-align: justify;"}
