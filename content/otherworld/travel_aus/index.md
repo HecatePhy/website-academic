@@ -155,7 +155,7 @@ I walked along the track, looking for lingering traces of grand prix.
 
 |The Finish Line|The Pits|
 |:-:|:-:|
-|![checker_flag](check_flag.jpg)|![pits](pits.jpg)|
+|![checker_flag](checker_flag.jpg)|![pits](pits.jpg)|
 
 Plus, the circuit serves as an exceptional vantage point fot admiring the Melbourne skyline:
 
