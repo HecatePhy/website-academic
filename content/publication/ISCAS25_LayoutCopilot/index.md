@@ -1,13 +1,14 @@
 ---
-title: 'Joint Placement Optimization for Hierarchical Analog/Mixed-Signal Circuits'
+title: 'LayoutCopilot: LLM-Empowered Analog Layout Design towards Enhanced Human-Machine Interaction'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - admin
-  - Haoyi Zhang
   - Bingyang Liu
+  - Haoyi Zhang
+  - admin
+  - Xiyuan Tang
   - Yibo Lin
   - Runsheng Wang
   - Ru Huang
@@ -21,7 +22,7 @@ date: '2024-12-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2024-12-01T00:00:00Z'
+publishDate: '2025-12-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -30,14 +31,14 @@ publishDate: '2024-12-01T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 43rd IEEE/ACM International Conference on Computer-Aided Design*
-publication_short: In *ICCAD'24*
+publication: In *Proceedings of the 30th Asia and South Pacific Design Automation Conference*
+publication_short: In *ASPDAC'25*
 
 
 # Summary. An optional shortened abstract.
 summary: .
 
-tags: ['analog', 'placement']
+tags: ['LLM', 'analog']
 
 categories: ['AMS']
 

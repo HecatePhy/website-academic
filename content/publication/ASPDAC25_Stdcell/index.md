@@ -1,16 +1,16 @@
 ---
-title: 'Joint Placement Optimization for Hierarchical Analog/Mixed-Signal Circuits'
+title: 'Exploring Better Intra-Cell Routability for Layout Synthesis of Multi-Row Standard Cells'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
+  - Kairong Guo
   - admin
   - Haoyi Zhang
-  - Bingyang Liu
-  - Yibo Lin
   - Runsheng Wang
   - Ru Huang
+  - Yibo Lin
 
 # Author notes (optional)
 #author_notes:
@@ -30,16 +30,16 @@ publishDate: '2024-12-01T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 43rd IEEE/ACM International Conference on Computer-Aided Design*
-publication_short: In *ICCAD'24*
+publication: In *Proceedings of the 30th Asia and South Pacific Design Automation Conference*
+publication_short: In *ASPDAC'25*
 
 
 # Summary. An optional shortened abstract.
 summary: .
 
-tags: ['analog', 'placement']
+tags: ['stdcell', 'layout']
 
-categories: ['AMS']
+categories: ['STDCELL']
 
 # Display this page in the Featured widget?
 featured: true
