@@ -90,7 +90,7 @@ highlight_name: true
 
 I am currently a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/).
 Also, I work as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http://yusu.belkin-wang.org/).
-My research interests include optimization algorithms, AI model applications in EDA, robotics. 
+My research interests include optimization algorithms, AI model applications in EDA, large-scale graph learning, and robotics. 
 
 Previously, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
 {style="text-align: justify;"}
