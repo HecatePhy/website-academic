@@ -20,15 +20,17 @@ role: Ph.D. Student
 organizations:
   - name: Peking University
     url: https://www.pku.edu.cn/
+  - name: UT Austin
+    url: https://www.utexas.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests mainly include EDA algorithms and AMS circuit design automation.
+bio: My research interests mainly include AI for chip design, optimization algorithms, and ML for robotics.
 
 # Interests to show in About widget
 interests:
-  - AMS circuit design automation
-  - EDA Algorithms
-  - Programming Languages x EDA
+  - AI for Chip Design
+  - Optimization Algorithms
+  - Machine Learning for Robotics
 
 # Education to show in About widget
 education:
@@ -88,7 +90,7 @@ highlight_name: true
 
 I am currently a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/).
 Also, I work as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http://yusu.belkin-wang.org/).
-My research interests include optimization algorithms, machine learning for EDA, programming language, and AMS circuit design automation. 
+My research interests include optimization algorithms, AI model applications in EDA, robotics. 
 
-Previously, I obtained my PhD degree from Peking University, where I was working at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
+Previously, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
 {style="text-align: justify;"}
