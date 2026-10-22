@@ -14,7 +14,28 @@ npm run build      # production build into dist/
 npm run preview    # serve dist/ locally
 ```
 
-Pushing to `main` makes Netlify run `npm run build` and publish `dist/` (see `netlify.toml`).
+To stop the dev/preview server, press Ctrl+C in its terminal.
+
+## Deploying (Netlify)
+
+- Every push to `main` makes Netlify run `npm run build` and publish `dist/` to gaoxiaohan.com (see `netlify.toml`).
+- To try a change first, push it to another branch and open a pull request into `main`: Netlify posts a
+  **Deploy Preview** link on the PR. Merging the PR publishes it.
+- To undo a bad release, open the site's **Deploys** page in Netlify and re-publish an earlier deploy (one click),
+  then fix things in git.
+
+## The old Hugo version (backup)
+
+The site ran on Hugo + Wowchemy until October 2026. That version is kept untouched on the `hugo-backup` branch.
+To look at it locally:
+
+```sh
+./scripts/preview-hugo-backup.sh     # http://localhost:1313 (Ctrl+C to stop)
+```
+
+The script checks the branch out into a separate temporary folder (your work is not touched) and runs the exact
+Hugo version it was built with (0.108.0, downloaded once). It needs Go (`brew install go`). Afterwards you can remove
+the temporary checkout with `git worktree remove --force "$TMPDIR/website-hugo-backup"`.
 
 ## Where things are
 
