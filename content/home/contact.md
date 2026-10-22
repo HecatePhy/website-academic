@@ -20,7 +20,7 @@ content:
   address:
     street: One Microsoft Way
     city: Redmond
-    region: Washington
+    region: WA
     postcode: '98052'
     country: United States
     country_code: US
