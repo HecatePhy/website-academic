@@ -18,13 +18,13 @@ content:
   # Contact details (edit or remove options as required)
   email: xiaohangao@pku.edu.cn
   address:
-    street: 2501 Speedway
-    city: Austin
-    region: Texas
-    postcode: '78712'
+    street: One Microsoft Way
+    city: Redmond
+    region: Washington
+    postcode: '98052'
     country: United States
     country_code: US
-  directions: Engineering Education and Research Center
+  #directions: Engineering Education and Research Center
   contact_links:
     - icon: telegram
       icon_pack: fab

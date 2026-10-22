@@ -89,6 +89,7 @@ highlight_name: true
 I joined Microsoft in 2026.
 Previously, I worked as a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/), and also as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http://yusu.belkin-wang.org/).
 Before that, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
+
 My PhD and postdoc research focused on optimization algorithms, GPU programming, and ML techniques like graph learning, for EDA, especially of FPGA and analog designs.
 Recently, my research interests have expanded into robotics, video gaming, and RL. 
 
