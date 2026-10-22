@@ -1,0 +1,28 @@
+---
+// Index of all values of an attribute, e.g. /tags/: a cloud of links with counts.
+import Base from '../layouts/Base.astro';
+import { TAXONOMIES, terms, type Taxonomy } from '../lib/taxonomy';
+
+interface Props {
+  tax: Taxonomy;
+}
+const { tax } = Astro.props;
+const t = TAXONOMIES[tax];
+const all = await terms(tax);
+const max = Math.max(...all.map((x) => x.items.length));
+---
+
+<Base title={t.plural}>
+  <div class="universal-wrapper">
+    <h1 class="page-title">{t.plural}</h1>
+    <div class="term-cloud">
+      {
+        all.map((x) => (
+          <a href={x.url} class="term-chip" style={`--w:${(0.85 + 0.5 * (x.items.length / max)).toFixed(2)}`}>
+            {x.name} <span class="count">{x.items.length}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Base>

@@ -19,8 +19,8 @@ We won the championship of the PKU Cup in Spring 2022!
 
 The story is not finished. We won the third place of the Freshman Cup in Spring 2023.
 
-![PKUCUP](team/pkucup.JPG "PKU CUP Championship 2022!")
+![PKUCUP](../../assets/media/team/pkucup.JPG "PKU CUP Championship 2022!")
 
 Two years after the first win, in 2024, we won the championship of the PKU Cup again!
 
-![PKUCUP2](team/pkucup2.JPG "PKU CUP Championship 2024!")
+![PKUCUP2](../../assets/media/team/pkucup2.JPG "PKU CUP Championship 2024!")

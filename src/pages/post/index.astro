@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostItem from '../../components/PostItem.astro';
+import { sortedEntries } from '../../lib/utils';
+
+const posts = await sortedEntries('post');
+---
+
+<Base title="Posts">
+  <div class="universal-wrapper">
+    <h1 class="page-title">Posts</h1>
+    {posts.map((p) => <PostItem entry={p} />)}
+  </div>
+</Base>

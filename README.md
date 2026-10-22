@@ -1,50 +1,61 @@
-# [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic)
+# gaoxiaohan.com
 
-[![Screenshot](./preview.png)](https://wowchemy.com/hugo-themes/)
+Personal website, built with [Astro](https://astro.build) (free, MIT-licensed) and hosted on Netlify's free tier.
+It used to run on Hugo + HugoBlox/Wowchemy; the look is recreated with plain CSS so everything can be edited here.
 
-The Hugo **Academic Resumé Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
+## Run it locally
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://wowchemy.com/hugo-themes/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/wowchemy?label=Follow%20on%20Twitter)](https://twitter.com/wowchemy)
+Requires Node.js 22.23 or newer (24 recommended, see `.nvmrc`).
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, widget-based Wowchemy page builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+```sh
+npm install        # once
+npm run dev        # live-reloading preview at http://localhost:4321
+npm run build      # production build into dist/
+npm run preview    # serve dist/ locally
+```
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+Pushing to `main` makes Netlify run `npm run build` and publish `dist/` (see `netlify.toml`).
 
-[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [get inspired by our academics and research groups](https://wowchemy.com/creators/).
+## Where things are
 
-The integrated [**Wowchemy**](https://wowchemy.com) website builder and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+| You want to change…                     | Edit                                                     |
+| --------------------------------------- | -------------------------------------------------------- |
+| Bio, name, role, interests, education, social icons | `content/authors/admin/_index.md` (+ `avatar.jpg`)   |
+| Homepage sections (order = `weight`)    | `content/home/*.md`                                      |
+| A publication                           | `content/publication/<Name>/index.md` (+ `cite.bib`)     |
+| A news post                             | `content/post/<name>/index.md` (+ `featured.jpg`)        |
+| A project                               | `content/project/<Name>/index.md`                        |
+| A travel / hobby story                  | `content/otherworld/<name>/index.md`                     |
+| Team / friends pages                    | `content/team/*.md`, `content/friend/*.md`               |
+| Otherworlds page (title, filter buttons)| `content/otherworlds/*.md`                               |
+| Menu, site title, analytics, footer     | `src/site.config.ts`                                     |
+| Colours, fonts, spacing (light + dark)  | `src/styles/global.css` (variables at the top)           |
+| Page layouts                            | `src/pages/**` and `src/components/**`                   |
+| Redirects for old URLs                  | `public/_redirects`                                      |
+| Static files (CV PDF, …)                | `public/` (e.g. `public/uploads/resume.pdf` → `/uploads/resume.pdf`) |
 
-- 👉 [**Get Started**](https://wowchemy.com/hugo-themes/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy research community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- ⬇️ **Automatically import your publications from BibTeX** with the [Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli)
-- 💡 [Suggest an improvement](https://github.com/wowchemy/wowchemy-hugo-themes/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://wowchemy.com/docs/hugo-tutorials/update/) and [Release Notes](https://github.com/wowchemy/wowchemy-hugo-themes/releases)
+Each page folder becomes a URL with a lower-cased name: `content/publication/DAC24_EasyACIM/` → `/publication/dac24_easyacim/`.
+Front matter fields are the same as before (`title`, `date`, `authors`, `publication_short`, `doi`, `links`, `tags`, …);
+`src/content.config.ts` lists them all.
 
-## We ask you, humbly, to support this open source movement
+### Markdown notes
 
-Today we ask you to defend the open source independence of the Wowchemy website builder and themes 🐧
+- Images: put the file next to `index.md` and write `![alt](photo.jpg)`. They are resized and converted to WebP automatically.
+- Captions: `![alt](photo.jpg "Caption text")` renders as a figure with a caption (replaces Hugo's `{{< figure >}}`).
+- `featured.jpg` / `featured.png` in a page folder is used as its thumbnail and header image.
+- `draft: true` hides a page.
+- Hugo shortcodes (`{{< … >}}`) no longer work; use plain Markdown or HTML.
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+### Attributes: authors, categories, tags
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+Front-matter `authors`, `categories`, `tags` (and `publication_types` on papers) are clickable everywhere and
+each value gets its own page listing every publication, post, project and otherworld that has it:
+`/authors/<name>/`, `/category/<name>/`, `/tag/<name>/`, `/publication-type/<n>/`, plus `/tags/`, `/categories/`
+and `/authors/` overviews. Use `admin` in `authors:` for yourself. The logic lives in `src/lib/taxonomy.ts`.
 
-<p align="center"><a href="https://wowchemy.com/templates/" target="_blank" rel="noopener"><img src="https://wowchemy.com/uploads/readmes/academic_logo_200px.png" alt="Hugo Academic Theme for Wowchemy Website Builder"></a></p>
+### Adding a new homepage-style section
 
-## Demo image credits
-
-- [Open book](https://unsplash.com/photos/J4kK8b9Fgj8)
-- [Course](https://unsplash.com/photos/JKUTrJ4vK00)
-
-## Latest news
-
-<!--START_SECTION:news-->
-* [Easily make an academic CV website to get more cites and grow your audience 🚀](https:&#x2F;&#x2F;wowchemy.com&#x2F;blog&#x2F;easily-make-academic-website&#x2F;)
-* [What&#39;s new in v5.2?](https:&#x2F;&#x2F;wowchemy.com&#x2F;blog&#x2F;whats-new-in-v5.2&#x2F;)
-* [What&#39;s new in v5.1?](https:&#x2F;&#x2F;wowchemy.com&#x2F;blog&#x2F;whats-new-in-v5.1&#x2F;)
-* [Version 5.0 (February 2021)](https:&#x2F;&#x2F;wowchemy.com&#x2F;blog&#x2F;version-5.0-february-2021&#x2F;)
-* [Version 5.0 Beta 3 (February 2021)](https:&#x2F;&#x2F;wowchemy.com&#x2F;blog&#x2F;version-5.0-beta-3-february-2021&#x2F;)
-<!--END_SECTION:news-->
+Any `.md` file in `content/home/` (or `team/`, `friend/`, `otherworlds/`) becomes a block on that page.
+The `widget` field picks the layout: `about`, `pages` (recent posts), `contact`, `portfolio`, or leave it out for
+"title on the left, Markdown on the right". New layouts go in `src/components/widgets/` and are wired up in
+`src/components/Sections.astro`.

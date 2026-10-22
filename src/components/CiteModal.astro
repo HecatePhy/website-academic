@@ -1,0 +1,38 @@
+<div class="modal" id="cite-modal" hidden>
+  <div class="modal-dialog" role="dialog" aria-label="Cite">
+    <div class="modal-header">
+      <h5>Cite</h5>
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body"><pre><code id="cite-text"></code></pre></div>
+    <div class="modal-footer">
+      <button class="btn btn-page-header" id="cite-copy"><i class="fas fa-copy"></i> Copy</button>
+      <button class="btn btn-page-header" id="cite-download"><i class="fas fa-download"></i> Download</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('cite-modal')!;
+  const text = document.getElementById('cite-text')!;
+  let filename = 'cite.bib';
+  document.querySelectorAll<HTMLElement>('.js-cite').forEach((b) =>
+    b.addEventListener('click', () => {
+      text.textContent = b.dataset.bib!;
+      filename = b.dataset.filename!;
+      modal.hidden = false;
+    }),
+  );
+  const copyBtn = document.getElementById('cite-copy')!;
+  copyBtn.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(text.textContent!);
+    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied';
+    setTimeout(() => (copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy'), 1500);
+  });
+  document.getElementById('cite-download')!.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text.textContent!], { type: 'text/plain' }));
+    a.download = filename;
+    a.click();
+  });
+</script>

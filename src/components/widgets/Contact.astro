@@ -1,0 +1,58 @@
+---
+import { iconClass } from '../../lib/utils';
+
+interface Props {
+  options: {
+    email?: string;
+    phone?: string;
+    address?: { street?: string; city?: string; region?: string; postcode?: string };
+    directions?: string;
+    contact_links?: { icon: string; icon_pack?: string; name: string; link: string }[];
+  };
+}
+const { email, phone, address, directions, contact_links = [] } = Astro.props.options;
+const addr = address && [address.street, address.city, [address.region, address.postcode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+---
+
+<ul class="contact-list">
+  {
+    email && (
+      <li>
+        <span class="icon"><i class="fas fa-envelope" /></span>
+        <a href={`mailto:${email}`}>{email}</a>
+      </li>
+    )
+  }
+  {
+    phone && (
+      <li>
+        <span class="icon"><i class="fas fa-phone" /></span>
+        <a href={`tel:${phone}`}>{phone}</a>
+      </li>
+    )
+  }
+  {
+    addr && (
+      <li>
+        <span class="icon"><i class="fas fa-map-marker" /></span>
+        <span>{addr}</span>
+      </li>
+    )
+  }
+  {
+    directions && (
+      <li>
+        <span class="icon"><i class="fas fa-compass" /></span>
+        <span>{directions}</span>
+      </li>
+    )
+  }
+  {
+    contact_links.map((l) => (
+      <li>
+        <span class="icon"><i class={iconClass(l.icon, l.icon_pack)} /></span>
+        <a href={l.link} target="_blank" rel="noopener">{l.name}</a>
+      </li>
+    ))
+  }
+</ul>

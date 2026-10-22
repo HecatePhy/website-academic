@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import ShowcaseItem from '../../components/ShowcaseItem.astro';
+import { sortedEntries } from '../../lib/utils';
+
+const projects = await sortedEntries('project');
+---
+
+<Base title="Projects">
+  <div class="universal-wrapper">
+    <h1 class="page-title">Projects</h1>
+    {projects.map((p) => <ShowcaseItem entry={p} section="project" />)}
+  </div>
+</Base>

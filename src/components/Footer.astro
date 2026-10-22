@@ -1,0 +1,17 @@
+---
+import { site } from '../site.config';
+---
+
+<footer class="page-footer">
+  <div class="container">
+    <p>
+      {site.copyright} <a href={site.license.url} rel="noopener noreferrer" target="_blank">{site.license.name}</a>
+    </p>
+    <p class="cc-icons">
+      <a href={site.license.url} rel="noopener noreferrer" target="_blank" aria-label="Creative Commons licence">
+        <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i
+          class="fab fa-creative-commons-nc"></i><i class="fab fa-creative-commons-nd"></i>
+      </a>
+    </p>
+  </div>
+</footer>

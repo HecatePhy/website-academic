@@ -1,0 +1,308 @@
+---
+// Site search in the style of macOS Spotlight.
+// Open: the 🔍 button in the navbar, ⌘K / Ctrl+K, or "/".  Navigate: ↑ ↓ ↩, close: Esc.
+---
+
+<div class="spotlight" id="spotlight" hidden>
+  <div class="spotlight-panel" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="spotlight-bar">
+      <i class="fas fa-magnifying-glass spotlight-glass" aria-hidden="true"></i>
+      <input
+        id="spotlight-input"
+        type="text"
+        placeholder="Search"
+        autocomplete="off"
+        spellcheck="false"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="spotlight-results"
+      />
+      <kbd class="spotlight-hint">esc</kbd>
+    </div>
+    <div class="spotlight-results" id="spotlight-results" role="listbox"></div>
+  </div>
+</div>
+
+<style is:global>
+  .spotlight {
+    --sp-bg: rgba(246, 246, 248, 0.78);
+    --sp-border: rgba(255, 255, 255, 0.6);
+    --sp-text: #1d1d1f;
+    --sp-muted: rgba(60, 60, 67, 0.6);
+    --sp-divider: rgba(60, 60, 67, 0.14);
+    --sp-accent: #0a64d8;
+    --sp-tile: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    inset: 0;
+    z-index: 2100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18vh 16px 16px;
+    background: rgba(0, 0, 0, 0.12);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'PingFang SC', sans-serif;
+  }
+  html.dark .spotlight {
+    --sp-bg: rgba(38, 38, 44, 0.72);
+    --sp-border: rgba(255, 255, 255, 0.12);
+    --sp-text: #f5f5f7;
+    --sp-muted: rgba(235, 235, 245, 0.55);
+    --sp-divider: rgba(255, 255, 255, 0.1);
+    --sp-accent: #0a64d8;
+    --sp-tile: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .spotlight[hidden] { display: none; }
+
+  .spotlight-panel {
+    width: 100%;
+    max-width: 680px;
+    color: var(--sp-text);
+    background: var(--sp-bg);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid var(--sp-border);
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    animation: sp-in 0.14s ease-out;
+  }
+  @keyframes sp-in {
+    from { opacity: 0; transform: translateY(-6px) scale(0.985); }
+  }
+
+  .spotlight-bar { display: flex; align-items: center; gap: 14px; padding: 0 18px; height: 60px; }
+  .spotlight-glass { font-size: 21px; color: var(--sp-muted); }
+  #spotlight-input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--sp-text);
+    font: inherit;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  #spotlight-input::placeholder { color: var(--sp-muted); }
+  .spotlight-hint {
+    font: inherit;
+    font-size: 11px;
+    color: var(--sp-muted);
+    border: 1px solid var(--sp-divider);
+    border-radius: 5px;
+    padding: 1px 6px;
+  }
+
+  .spotlight-results {
+    max-height: min(56vh, 460px);
+    overflow-y: auto;
+    padding: 0 8px 8px;
+    border-top: 1px solid var(--sp-divider);
+  }
+  .spotlight-results:empty { display: none; }
+  .sp-group {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--sp-muted);
+    padding: 10px 10px 4px;
+  }
+  .sp-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 6px 10px;
+    border-radius: 9px;
+    color: var(--sp-text);
+    text-decoration: none;
+    cursor: default;
+  }
+  .sp-item:hover { color: var(--sp-text); }
+  .sp-item[aria-selected='true'] { background: var(--sp-accent); color: #fff; }
+  .sp-icon {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    color: #fff;
+    box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+  }
+  .sp-icon.publication { background: linear-gradient(#5b9cf8, #2d6fe0); }
+  .sp-icon.post { background: linear-gradient(#ff9f5a, #f0702a); }
+  .sp-icon.project { background: linear-gradient(#5fd38a, #2ea85c); }
+  .sp-icon.otherworld { background: linear-gradient(#c58af9, #9150e0); }
+  .sp-icon.tag { background: linear-gradient(#a3a3ad, #75757f); }
+  .sp-icon.category { background: linear-gradient(#5ac8d8, #2a9fb3); }
+  .sp-icon.author { background: linear-gradient(#f3c14f, #e09a1b); }
+  .sp-text { min-width: 0; flex: 1; }
+  .sp-title {
+    font-size: 14.5px;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sp-title b { font-weight: 650; }
+  .sp-sub {
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--sp-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sp-item[aria-selected='true'] .sp-sub { color: rgba(255, 255, 255, 0.78); }
+  .sp-enter { font-size: 12px; opacity: 0; }
+  .sp-item[aria-selected='true'] .sp-enter { opacity: 0.85; }
+  .sp-empty { padding: 18px 10px 12px; font-size: 14px; color: var(--sp-muted); text-align: center; }
+
+  @media (max-width: 600px) {
+    .spotlight { padding-top: 10vh; }
+    .spotlight-bar { height: 52px; }
+    #spotlight-input { font-size: 19px; }
+    .spotlight-hint { display: none; }
+  }
+</style>
+
+<script>
+  type Doc = { title: string; url: string; kind: string; sub: string; text: string };
+  const KINDS: Record<string, { group: string; icon: string; cls: string }> = {
+    Publication: { group: 'Publications', icon: 'fa-file-lines', cls: 'publication' },
+    Post: { group: 'Posts', icon: 'fa-newspaper', cls: 'post' },
+    Project: { group: 'Projects', icon: 'fa-flask', cls: 'project' },
+    Otherworld: { group: 'Otherworlds', icon: 'fa-earth-asia', cls: 'otherworld' },
+    Tag: { group: 'Tags', icon: 'fa-tag', cls: 'tag' },
+    Category: { group: 'Categories', icon: 'fa-folder', cls: 'category' },
+    Author: { group: 'People', icon: 'fa-user', cls: 'author' },
+  };
+
+  const overlay = document.getElementById('spotlight')!;
+  const input = document.getElementById('spotlight-input') as HTMLInputElement;
+  const list = document.getElementById('spotlight-results')!;
+  let docs: Doc[] | undefined;
+  let docsPromise: Promise<Doc[]> | undefined;
+  const loadDocs = () => (docsPromise ??= fetch('/search.json').then((r) => r.json()));
+  let lastQuery = '';
+  let items: HTMLAnchorElement[] = [];
+  let selected = 0;
+
+  const esc = (s: string) =>
+    s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const escRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const bold = (s: string, terms: string[]) =>
+    esc(s).replace(new RegExp(`(${terms.map((t) => escRe(esc(t))).join('|')})`, 'gi'), '<b>$1</b>');
+
+  function select(i: number) {
+    if (!items.length) return;
+    selected = (i + items.length) % items.length;
+    items.forEach((el, j) => el.setAttribute('aria-selected', String(j === selected)));
+    items[selected].scrollIntoView({ block: 'nearest' });
+  }
+
+  async function search() {
+    docs ??= await loadDocs();
+    const q = input.value.trim().toLowerCase();
+    if (q === lastQuery && (items.length || !q)) return; // nothing changed (keeps the selection)
+    lastQuery = q;
+    input.setAttribute('aria-expanded', String(!!q));
+    if (!q) {
+      list.innerHTML = '';
+      items = [];
+      return;
+    }
+    const terms = q.split(/\s+/);
+    // Title matches rank above body-only matches; original (newest-first) order otherwise.
+    const hits = docs!
+      .map((d, i) => {
+        const title = d.title.toLowerCase();
+        if (!terms.every((t) => title.includes(t) || d.text.toLowerCase().includes(t))) return null;
+        const exact = title === q ? 1000 : title.startsWith(q) ? 300 : 0;
+        return { d, score: exact + terms.filter((t) => title.includes(t)).length * 100 - i * 0.01 };
+      })
+      .filter((h): h is { d: Doc; score: number } => !!h)
+      .sort((a, b) => b.score - a.score);
+
+    if (!hits.length) {
+      list.innerHTML = `<div class="sp-empty">No results for “${esc(input.value.trim())}”</div>`;
+      items = [];
+      return;
+    }
+    // Group by kind, groups ordered by their best hit (like Spotlight's "Top Hit" first).
+    const groups = new Map<string, Doc[]>();
+    for (const { d } of hits.slice(0, 30)) groups.set(d.kind, [...(groups.get(d.kind) ?? []), d]);
+    let html = '';
+    for (const [kind, ds] of groups) {
+      const k = KINDS[kind] ?? { group: kind, icon: 'fa-file', cls: 'publication' };
+      html += `<div class="sp-group">${k.group}</div>`;
+      for (const d of ds) {
+        // Subtitle: the page's own summary line, or the matching passage if the hit is in the body.
+        const inTitle = terms.every((t) => d.title.toLowerCase().includes(t));
+        const i = d.text.toLowerCase().indexOf(terms.find((t) => !d.title.toLowerCase().includes(t)) ?? terms[0]);
+        const sub = inTitle || i < 0 ? d.sub : (i > 40 ? '…' : '') + d.text.slice(Math.max(0, i - 40), i + 100);
+        html += `<a class="sp-item" role="option" href="${d.url}">
+          <span class="sp-icon ${k.cls}"><i class="fas ${k.icon}"></i></span>
+          <span class="sp-text"><div class="sp-title">${bold(d.title, terms)}</div><div class="sp-sub">${esc(sub)}</div></span>
+          <span class="sp-enter">↩</span></a>`;
+      }
+    }
+    list.innerHTML = html;
+    items = [...list.querySelectorAll<HTMLAnchorElement>('.sp-item')];
+    items.forEach((el, j) => el.addEventListener('mousemove', () => selected !== j && select(j)));
+    select(0);
+  }
+
+  let opener: Element | null = null;
+  function open() {
+    loadDocs();
+    opener = document.activeElement;
+    overlay.hidden = false;
+    input.select();
+    input.focus();
+    search();
+  }
+  function close() {
+    overlay.hidden = true;
+    input.blur();
+    if (opener instanceof HTMLElement) opener.focus({ preventScroll: true });
+  }
+
+  input.addEventListener('input', search);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || (e.key === 'n' && e.ctrlKey)) { e.preventDefault(); select(selected + 1); }
+    else if (e.key === 'ArrowUp' || (e.key === 'p' && e.ctrlKey)) { e.preventDefault(); select(selected - 1); }
+    else if (e.key === 'Enter' && !e.isComposing && items[selected]) { e.preventDefault(); location.href = items[selected].href; }
+  });
+  // Click outside the panel closes it; clicks inside keep the cursor in the search field.
+  overlay.addEventListener('mousedown', (e) => {
+    const t = e.target as HTMLElement;
+    if (t === overlay) close();
+    else if (t !== input && !t.closest('a')) e.preventDefault();
+  });
+  // Esc closes from anywhere while the panel is open. Listening on window (capture phase) means
+  // it works no matter where focus is. While an input method (e.g. Pinyin) is composing,
+  // the first Esc only cancels the composition, as in macOS Spotlight.
+  window.addEventListener(
+    'keydown',
+    (e) => {
+      if (overlay.hidden || e.isComposing || e.keyCode === 229) return;
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    },
+    true,
+  );
+  document.querySelectorAll('.js-search').forEach((b) => b.addEventListener('click', open));
+  document.addEventListener('keydown', (e) => {
+    const typing = (e.target as HTMLElement).closest('input, textarea, select, [contenteditable]');
+    if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing)) {
+      e.preventDefault();
+      overlay.hidden ? open() : close();
+    }
+  });
+</script>

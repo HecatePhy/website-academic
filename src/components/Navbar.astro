@@ -1,0 +1,49 @@
+---
+import { menu, site } from '../site.config';
+
+const path = Astro.url.pathname;
+const isActive = (url?: string) => {
+  if (!url || url.startsWith('http')) return false;
+  if (url.startsWith('/#')) return path === '/';
+  return path.startsWith(url);
+};
+---
+
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">{site.title}</a>
+    <button class="nav-toggler" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    <ul class="nav-main">
+      {
+        menu.map((item) =>
+          item.children ? (
+            <li class="nav-dropdown">
+              <button class:list={['nav-link', { active: item.children.some((c) => isActive(c.url)) }]} aria-haspopup="true">
+                {item.name}
+              </button>
+              <ul class="dropdown-menu">
+                {item.children.map((c) => (
+                  <li>
+                    <a class="dropdown-item" href={c.url}>
+                      {c.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ) : (
+            <li>
+              <a class:list={['nav-link', { active: isActive(item.url) && item.name !== 'Contact' }]} href={item.url}>
+                {item.name}
+              </a>
+            </li>
+          ),
+        )
+      }
+    </ul>
+    <div class="nav-tools">
+      <button class="nav-link js-search" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-link js-theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</nav>

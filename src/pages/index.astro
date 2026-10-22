@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import Sections from '../components/Sections.astro';
+import { sections } from '../lib/utils';
+
+const entries = await sections('home');
+---
+
+<Base>
+  <Sections entries={entries} />
+</Base>

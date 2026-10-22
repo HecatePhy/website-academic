@@ -1,0 +1,39 @@
+---
+// A mixed list of pages, grouped under "Publications", "Posts", "Projects", "Otherworlds".
+import type { CollectionEntry } from 'astro:content';
+import { bySection, type Item } from '../lib/taxonomy';
+import PubItem from './PubItem.astro';
+import PostItem from './PostItem.astro';
+import ShowcaseItem from './ShowcaseItem.astro';
+import CiteModal from './CiteModal.astro';
+
+interface Props {
+  items: Item[];
+  /** Show the group headings (off when everything is from one section). */
+  headings?: boolean;
+}
+const { items, headings = true } = Astro.props;
+const groups = bySection(items);
+---
+
+{
+  groups.map((g) => (
+    <section class="item-group">
+      {headings && groups.length > 0 && (
+        <h2 class="item-group-title">
+          {g.title} <span class="count">{g.items.length}</span>
+        </h2>
+      )}
+      {g.items.map((it) =>
+        it.section === 'publication' ? (
+          <PubItem entry={it.entry as CollectionEntry<'publication'>} />
+        ) : it.section === 'post' ? (
+          <PostItem entry={it.entry as CollectionEntry<'post'>} />
+        ) : (
+          <ShowcaseItem entry={it.entry as CollectionEntry<'project' | 'otherworld'>} section={it.section} />
+        ),
+      )}
+    </section>
+  ))
+}
+{groups.some((g) => g.key === 'publication') && <CiteModal />}

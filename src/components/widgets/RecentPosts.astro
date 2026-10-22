@@ -1,0 +1,14 @@
+---
+import { sortedEntries } from '../../lib/utils';
+import PostItem from '../PostItem.astro';
+
+interface Props {
+  options: { count?: number; offset?: number; order?: string };
+}
+const { count = 0, offset = 0, order = 'desc' } = Astro.props.options;
+let posts = await sortedEntries('post');
+if (order === 'asc') posts = posts.reverse();
+posts = posts.slice(offset, count ? offset + count : undefined);
+---
+
+{posts.map((p) => <PostItem entry={p} />)}

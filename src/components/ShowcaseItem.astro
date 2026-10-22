@@ -1,0 +1,32 @@
+---
+// One project / otherworld in a list: title, summary, link buttons, thumbnail on the right.
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { featuredImage, formatDate, inlineMd } from '../lib/utils';
+import LinkButtons from './LinkButtons.astro';
+
+interface Props {
+  entry: CollectionEntry<'project'> | CollectionEntry<'otherworld'>;
+  section: 'project' | 'otherworld';
+}
+const { entry, section } = Astro.props;
+const d = entry.data;
+const url = d.external_link || `/${section}/${entry.id}/`;
+const img = featuredImage(section, entry.id);
+---
+
+<div class="stream-item">
+  <div class="media-body">
+    <div class="section-subheading"><a href={url}>{d.title}</a></div>
+    {d.summary && <a href={url} class="summary"><div class="summary" set:html={inlineMd(d.summary)} /></a>}
+    {section === 'otherworld' && d.date && <div class="article-metadata">{formatDate(d.lastmod ?? d.date)}</div>}
+    <LinkButtons links={d.links} />
+  </div>
+  {
+    img && (
+      <div class="thumb">
+        <a href={url}><Image src={img} alt={d.title} width={300} /></a>
+      </div>
+    )
+  }
+</div>
