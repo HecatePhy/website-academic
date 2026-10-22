@@ -22,13 +22,13 @@ organizations:
     url: https://www.pku.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My previous research . My research interests mainly include AI for chip design, optimization algorithms, and ML for robotics. My research interests mainly include optimization algorithms, advanced AI methods, and robotics. 
+bio: My research interests include optimization algorithms, robotics, and video gaming. My previous research mainly focuses on AI for chip design. 
 
 # Interests to show in About widget
 interests: 
   - Optimization Algorithms
-  - Acceleration
-  - Machine Learning
+  - Robotics
+  - Video Gaming
 
 # Education to show in About widget
 education:
@@ -86,8 +86,9 @@ email: ''
 highlight_name: true
 ---
 
-I am currently a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/).
-Also, I work as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http://yusu.belkin-wang.org/).
-My research interests include optimization algorithms, AI model applications in EDA, large-scale graph learning, and robotics. 
+I joined Microsoft in 2026.
+Previously, I worked as a postdoctoral fellow at [UTDA](https://www.cerc.utexas.edu/utda/), UT Austin, advised by Prof. [David Pan](https://users.ece.utexas.edu/~dpan/), and also as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http://yusu.belkin-wang.org/).
+Before that, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
+My PhD and postdoc research focused on optimization algorithms, GPU programming, and ML techniques like graph learning, for EDA, especially of FPGA and analog designs.
+Recently, my research interests have expanded into robotics, video gaming, and RL. 
 
-Previously, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
