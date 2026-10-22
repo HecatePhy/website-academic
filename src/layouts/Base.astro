@@ -1,0 +1,127 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Spotlight from '../components/Spotlight.astro';
+import { site } from '../site.config';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = site.description } = Astro.props;
+const fullTitle = title ? `${title} | ${site.title}` : site.title;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, site.url)} />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={site.title} />
+
+    <!-- Colour theme: follows the browser/system setting by default. Applied before first paint (no flash).
+         The navbar toggle stores an override only while it differs from the system setting. -->
+    <script is:inline>
+      (() => {
+        let t = null;
+        try { t = localStorage.getItem('color-theme'); } catch {}
+        const dark = t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
+
+    {
+      site.googleAnalytics && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalytics}`} />
+          <script is:inline define:vars={{ id: site.googleAnalytics }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', id);
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <Spotlight />
+
+    <script>
+      // ---- dark mode ----
+      // Default = browser/system setting. Clicking the toggle overrides it; toggling back to
+      // what the system uses (or the system itself switching) returns to "follow the system".
+      const root = document.documentElement;
+      const KEY = 'color-theme';
+      const systemDark = matchMedia('(prefers-color-scheme: dark)');
+      const apply = (dark: boolean) => {
+        root.classList.toggle('dark', dark);
+        document.querySelectorAll<HTMLElement>('.js-theme-toggle').forEach((b) => {
+          b.querySelector('i')!.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+          b.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+        });
+      };
+      apply(root.classList.contains('dark'));
+      document.querySelectorAll('.js-theme-toggle').forEach((b) =>
+        b.addEventListener('click', () => {
+          const dark = !root.classList.contains('dark');
+          try {
+            if (dark === systemDark.matches) localStorage.removeItem(KEY);
+            else localStorage.setItem(KEY, dark ? 'dark' : 'light');
+          } catch {}
+          apply(dark);
+        }),
+      );
+      systemDark.addEventListener('change', (e) => {
+        try { localStorage.removeItem(KEY); } catch {}
+        apply(e.matches);
+      });
+
+      // ---- mobile menu + dropdowns ----
+      const nav = document.querySelector('.navbar')!;
+      nav.querySelector('.nav-toggler')?.addEventListener('click', () => nav.classList.toggle('open'));
+      document.querySelectorAll('.nav-dropdown > .nav-link').forEach((b) =>
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          b.parentElement!.classList.toggle('open');
+        }),
+      );
+      document.addEventListener('click', () =>
+        document.querySelectorAll('.nav-dropdown.open').forEach((d) => d.classList.remove('open')),
+      );
+
+      // ---- modals (shared by search + cite) ----
+      document.querySelectorAll<HTMLElement>('.modal').forEach((m) => {
+        m.addEventListener('click', (e) => {
+          if (e.target === m || (e.target as HTMLElement).closest('[data-close]')) m.hidden = true;
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') document.querySelectorAll<HTMLElement>('.modal').forEach((m) => (m.hidden = true));
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+---
+import ShowcasePage from '../../components/ShowcasePage.astro';
+import { sortedEntries } from '../../lib/utils';
+
+export async function getStaticPaths() {
+  return (await sortedEntries('otherworld')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+---
+
+<ShowcasePage entry={entry} section="otherworld" />

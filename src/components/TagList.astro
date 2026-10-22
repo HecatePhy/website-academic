@@ -1,0 +1,19 @@
+---
+// Tag badges shown at the end of a page.
+import { termUrl } from '../lib/taxonomy';
+
+interface Props {
+  tags?: string[];
+}
+const { tags = [] } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <div class="article-tags">
+      {tags.map((t) => (
+        <a class="badge" href={termUrl('tags', t)}>{t}</a>
+      ))}
+    </div>
+  )
+}

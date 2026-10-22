@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { inlineMd } from '../lib/utils';
+import AuthorList from './AuthorList.astro';
+import PubButtons from './PubButtons.astro';
+
+interface Props {
+  entry: CollectionEntry<'publication'>;
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const year = d.date?.getUTCFullYear();
+const venue = d.publication_short || d.publication;
+const searchText = [d.title, d.authors.join(' '), d.publication, d.publication_short, d.abstract].join(' ').toLowerCase();
+---
+
+<div class="pub-list-item" data-type={d.publication_types[0]} data-year={year} data-search={searchText}>
+  <i class="far fa-file-lines pub-icon" aria-hidden="true"></i>
+  <AuthorList authors={d.authors} notes={d.author_notes} />
+  {year && ` (${year})`}. <a href={`/publication/${entry.id}/`}>{d.title}</a>.{' '}
+  {venue && <span set:html={`${inlineMd(venue)}.`} />}
+  <PubButtons entry={entry} compact />
+</div>

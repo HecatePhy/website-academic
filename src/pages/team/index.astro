@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import Sections from '../../components/Sections.astro';
+import { sections } from '../../lib/utils';
+
+const entries = await sections('team');
+---
+
+<Base title="Team">
+  <div class="page-sections">
+    <Sections entries={entries} />
+  </div>
+</Base>

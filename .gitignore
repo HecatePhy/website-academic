@@ -1,13 +1,11 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
-public/
-jsconfig.json
+# Astro
 node_modules/
-go.sum
-.hugo_build.lock
+dist/
+.astro/
+
+# Old Hugo build output
+resources/
+public/uploads/*.tmp
 
 # mac
 *DS_Store*

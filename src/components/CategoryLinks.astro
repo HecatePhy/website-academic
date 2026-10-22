@@ -1,0 +1,27 @@
+---
+// "📁 AMS, DFM" in the metadata line, each category linking to its page.
+import { termUrl } from '../lib/taxonomy';
+
+interface Props {
+  categories?: string[];
+  divider?: boolean;
+}
+const { categories = [], divider = true } = Astro.props;
+---
+
+{
+  categories.length > 0 && (
+    <>
+      {divider && <span class="middot-divider" />}
+      <span class="article-categories">
+        <i class="fas fa-folder" />{' '}
+        {categories.map((c, i) => (
+          <>
+            <a href={termUrl('categories', c)}>{c}</a>
+            {i < categories.length - 1 && ', '}
+          </>
+        ))}
+      </span>
+    </>
+  )
+}

@@ -1,0 +1,22 @@
+---
+import { iconClass } from '../lib/utils';
+
+interface Props {
+  links?: { icon?: string; icon_pack?: string; name: string; url: string }[];
+  big?: boolean;
+}
+const { links = [], big = false } = Astro.props;
+---
+
+{
+  links.length > 0 && (
+    <div class="btn-links">
+      {links.map((l) => (
+        <a class:list={['btn', { 'btn-page-header': big }]} href={l.url} target="_blank" rel="noopener">
+          {l.icon && <i class={iconClass(l.icon, l.icon_pack)} />}
+          {l.name}
+        </a>
+      ))}
+    </div>
+  )
+}

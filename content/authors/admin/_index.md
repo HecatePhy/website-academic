@@ -14,23 +14,21 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. Student
+role: Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Peking University
     url: https://www.pku.edu.cn/
-  - name: UT Austin
-    url: https://www.utexas.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests mainly include AI for chip design, optimization algorithms, and ML for robotics.
+bio: My previous research . My research interests mainly include AI for chip design, optimization algorithms, and ML for robotics. My research interests mainly include optimization algorithms, advanced AI methods, and robotics. 
 
 # Interests to show in About widget
-interests:
-  - AI for Chip Design
+interests: 
   - Optimization Algorithms
-  - Machine Learning for Robotics
+  - Acceleration
+  - Machine Learning
 
 # Education to show in About widget
 education:
@@ -93,4 +91,3 @@ Also, I work as part of [TILOS](https://tilos.ai/) with Prof. [Yusu Wang](http:/
 My research interests include optimization algorithms, AI model applications in EDA, large-scale graph learning, and robotics. 
 
 Previously, I obtained my PhD degree from Peking University, where I worked at [CECA](https://ceca.pku.edu.cn/), advised by Prof. [Yibo Lin](https://yibolin.com/).
-{style="text-align: justify;"}

@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { bibOf } from '../lib/utils';
+
+interface Props {
+  entry: CollectionEntry<'publication'>;
+  big?: boolean;
+  /** List view shows fewer buttons, like the old site. */
+  compact?: boolean;
+}
+const { entry, big = false, compact = false } = Astro.props;
+const d = entry.data;
+const bib = bibOf(entry.id);
+const cls = ['btn', { 'btn-page-header': big }];
+const extra: [string | undefined, string, string][] = [
+  [d.url_pdf, 'PDF', 'fas fa-file-pdf'],
+  [d.url_code, 'Code', 'fab fa-github'],
+  [d.url_dataset, 'Dataset', 'fas fa-database'],
+  [d.url_poster, 'Poster', 'fas fa-image'],
+  [d.url_slides, 'Slides', 'fas fa-person-chalkboard'],
+  [d.url_video, 'Video', 'fas fa-video'],
+];
+---
+
+<div class="btn-links">
+  {
+    bib && (
+      <button class:list={cls} class="js-cite" data-filename={`${entry.id}.bib`} data-bib={bib}>
+        Cite
+      </button>
+    )
+  }
+  {extra.filter(([u]) => u).map(([u, name]) => <a class:list={cls} href={u} target="_blank" rel="noopener">{name}</a>)}
+  {!compact && d.projects?.map((p) => <a class:list={cls} href={`/project/${p.toLowerCase()}/`}>Project</a>)}
+  {!compact && d.doi && <a class:list={cls} href={`https://doi.org/${d.doi}`} target="_blank" rel="noopener">DOI</a>}
+</div>

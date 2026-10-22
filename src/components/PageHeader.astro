@@ -1,0 +1,31 @@
+---
+// Title block + optional wide featured image shared by single pages.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { inlineMd } from '../lib/utils';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  image?: ImageMetadata;
+  caption?: string;
+  /** Hugo-style placement: 1 = text column, 2 = wide, 3 = full width. */
+  placement?: number;
+}
+const { title, subtitle, image, caption, placement = 1 } = Astro.props;
+const maxWidth = { 1: 720, 2: 1200, 3: 99999 }[placement] ?? 720;
+---
+
+<div class="article-container article-header-title">
+  <h1 class="article-title">{title}</h1>
+  {subtitle && <p class="page-subtitle" set:html={inlineMd(subtitle)} />}
+  <slot />
+</div>
+{
+  image && (
+    <div class="article-header" style={`max-width:${Math.min(image.width, maxWidth)}px`}>
+      <Image src={image} alt={title} width={Math.min(image.width, placement === 1 ? 1440 : 2400)} loading="eager" />
+      {caption && <span class="article-header-caption" set:html={inlineMd(caption)} />}
+    </div>
+  )
+}

@@ -1,0 +1,81 @@
+---
+import { getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import { avatarOf, iconClass } from '../../lib/utils';
+
+interface Props {
+  author: string;
+  title?: string;
+}
+const { author, title = 'Biography' } = Astro.props;
+const entry = await getEntry('authors', author);
+if (!entry) throw new Error(`Author "${author}" not found in content/authors/`);
+const a = entry.data as any;
+const { Content } = await render(entry);
+const avatar = avatarOf(author);
+const courses = a.education?.courses ?? [];
+---
+
+<div class="about-row">
+  <div id="profile">
+    {avatar && <Image class="avatar" src={avatar} alt={a.title} width={540} height={540} loading="eager" />}
+    <div class="portrait-title">
+      <h2>{a.title}</h2>
+      {a.role && <h3>{a.role}</h3>}
+      {
+        (a.organizations ?? []).map((o: any) => (
+          <h3>{o.url ? <a href={o.url} target="_blank" rel="noopener">{o.name}</a> : o.name}</h3>
+        ))
+      }
+    </div>
+    <ul class="network-icon" aria-hidden="true">
+      {
+        (a.social ?? []).map((s: any) => {
+          const external = /^https?:/.test(s.link);
+          const href = external || s.link.startsWith('/') ? s.link : `/${s.link}`;
+          return (
+            <li>
+              <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined} aria-label={s.icon}>
+                <i class={`${iconClass(s.icon, s.icon_pack)} big-icon`} />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <div class="bio-text">
+    {title && <h1>{title}</h1>}
+    <div class="article-style" style="padding-bottom:0"><Content /></div>
+    <div class="about-lists">
+      {
+        a.interests?.length > 0 && (
+          <div>
+            <h3>Interests</h3>
+            <ul class="ul-interests">
+              {a.interests.map((i: string) => <li>{i}</li>)}
+            </ul>
+          </div>
+        )
+      }
+      {
+        courses.length > 0 && (
+          <div>
+            <h3>Education</h3>
+            <ul class="ul-edu">
+              {courses.map((c: any) => (
+                <li>
+                  <i class="edu-icon fas fa-graduation-cap" />
+                  <div class="description">
+                    <p class="course">{c.course}{c.year && `, ${c.year}`}</p>
+                    <p class="institution">{c.institution}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>

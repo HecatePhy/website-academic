@@ -1,0 +1,117 @@
+---
+import { Image } from 'astro:assets';
+import { featuredImage, sortedEntries, inlineMd } from '../../lib/utils';
+import LinkButtons from '../LinkButtons.astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  options: { page_type?: string; filter_default?: number; filter_button?: { name: string; tag: string }[] };
+}
+const { title, subtitle, options } = Astro.props;
+const section = (options.page_type ?? 'otherworld') as 'otherworld' | 'project';
+const items = await sortedEntries(section);
+const buttons = options.filter_button ?? [];
+const def = buttons[options.filter_default ?? 0]?.tag ?? '*';
+---
+
+<div class="portfolio-header">
+  {title && <h1>{title}</h1>}
+  {subtitle && <p class="muted">{subtitle}</p>}
+  {
+    buttons.length > 0 && (
+      <div class="filter-toolbar">
+        {buttons.map((b) => (
+          <button data-filter={b.tag.toLowerCase()} class:list={{ active: b.tag === def }}>
+            {b.name}
+          </button>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<div class="portfolio-grid">
+  {
+    items.map((it) => {
+      const img = featuredImage(section, it.id);
+      const href = it.data.external_link || `/${section}/${it.id}/`;
+      const tags = (it.data.tags ?? []).map((t: string) => t.toLowerCase()).join(' ');
+      return (
+        <div class="project-card" data-tags={tags}>
+          {img && (
+            <a href={href}>
+              <Image src={img} alt={it.data.title} width={640} />
+            </a>
+          )}
+          <div class="card-body">
+            <div class="section-subheading">
+              <a href={href}>{it.data.title}</a>
+            </div>
+            {it.data.summary && <div class="card-text" set:html={inlineMd(it.data.summary)} />}
+            <LinkButtons links={it.data.links} />
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
+
+<script>
+  // Masonry layout: cards keep their newest-first order, and each one is placed in
+  // whichever column is currently shortest, so columns end up at similar heights.
+  const GAP = 20;
+  const columnCount = (w: number) => (w >= 900 ? 3 : w >= 560 ? 2 : 1);
+
+  document.querySelectorAll<HTMLElement>('.portfolio-grid').forEach((grid) => {
+    const section = grid.closest('section')!;
+    const bar = section.querySelector<HTMLElement>('.filter-toolbar');
+    const cards = [...grid.querySelectorAll<HTMLElement>('.project-card')];
+    let tag = bar?.querySelector<HTMLButtonElement>('button.active')?.dataset.filter ?? '*';
+    let lastCount = 0;
+
+    const layout = (force = false) => {
+      const n = columnCount(grid.clientWidth);
+      if (!force && n === lastCount) return;
+      lastCount = n;
+      grid.classList.add('masonry');
+      const cols = Array.from({ length: n }, () => {
+        const c = document.createElement('div');
+        c.className = 'masonry-col';
+        return c;
+      });
+      grid.replaceChildren(...cols);
+      const heights = new Array(n).fill(0);
+      for (const card of cards) {
+        card.hidden = tag !== '*' && !card.dataset.tags!.split(' ').includes(tag);
+        if (card.hidden) {
+          cols[0].appendChild(card); // keep it in the DOM, just invisible
+          continue;
+        }
+        const i = heights.indexOf(Math.min(...heights)); // shortest column (leftmost on ties)
+        cols[i].appendChild(card);
+        heights[i] += card.offsetHeight + GAP;
+      }
+    };
+
+    bar?.querySelectorAll<HTMLButtonElement>('button').forEach((b) =>
+      b.addEventListener('click', () => {
+        tag = b.dataset.filter!;
+        bar.querySelectorAll('button').forEach((x) => x.classList.toggle('active', x === b));
+        layout(true);
+      }),
+    );
+    layout(true);
+    // Let the hover glow follow the cursor.
+    grid.addEventListener('pointermove', (e) => {
+      const card = (e.target as HTMLElement).closest<HTMLElement>('.project-card');
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+    // Re-pack when the number of columns changes, and once fonts/images have settled.
+    new ResizeObserver(() => layout()).observe(grid);
+    window.addEventListener('load', () => layout(true));
+  });
+</script>

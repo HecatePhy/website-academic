@@ -1,0 +1,55 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import AuthorList from '../../components/AuthorList.astro';
+import CategoryLinks from '../../components/CategoryLinks.astro';
+import TagList from '../../components/TagList.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+import { termUrl } from '../../lib/taxonomy';
+import PubButtons from '../../components/PubButtons.astro';
+import CiteModal from '../../components/CiteModal.astro';
+import { sortedEntries, featuredImage, formatMonth, inlineMd } from '../../lib/utils';
+import { publicationTypes } from '../../site.config';
+
+export async function getStaticPaths() {
+  return (await sortedEntries('publication')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const img = featuredImage('publication', entry.id);
+---
+
+<Base title={d.title} description={d.summary ?? d.abstract}>
+  <PageHeader title={d.title}>
+    <div class="article-metadata">
+      <div><AuthorList authors={d.authors} notes={d.author_notes} /></div>
+      <span>{formatMonth(d.date)}</span>
+      <CategoryLinks categories={d.categories} />
+    </div>
+    <PubButtons entry={entry} big />
+  </PageHeader>
+  <div class="article-container">
+    {img && <div class="article-header"><img src={img.src} alt="" /></div>}
+    {
+      d.abstract && (
+        <>
+          <h3>Abstract</h3>
+          <p class="article-style" style="padding-bottom:0">{d.abstract}</p>
+        </>
+      )
+    }
+    <div class="pub-details">
+      <div class="label">Type</div>
+      <div class="value">
+        {d.publication_types.map((t) => <a href={termUrl('publication_types', t)}>{publicationTypes[t] ?? t}</a>)}
+      </div>
+      {d.publication && <div class="label">Publication</div><div class="value" set:html={inlineMd(d.publication)} />}
+    </div>
+    <div class="article-style"><Content /></div>
+    <TagList tags={d.tags} />
+    <AuthorCard authors={d.authors} />
+  </div>
+  <CiteModal />
+</Base>

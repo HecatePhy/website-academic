@@ -1,0 +1,7 @@
+# Netlify redirects for URLs that existed on the old Hugo site.
+/otherworld           /otherworlds/   301
+/otherworld/          /otherworlds/   301
+/publication_types/   /publication/   301
+/slides/*             /               301
+/event/*              /               301
+/talk/*               /               301

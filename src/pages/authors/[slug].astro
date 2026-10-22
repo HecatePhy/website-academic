@@ -1,0 +1,17 @@
+---
+// Author pages. Your own page (/authors/admin/) shows your profile above your work;
+// co-authors' pages list the work you share with them.
+import TermPage from '../../components/TermPage.astro';
+import About from '../../components/widgets/About.astro';
+import { terms } from '../../lib/taxonomy';
+
+export async function getStaticPaths() {
+  return (await terms('authors')).map((term) => ({ params: { slug: term.slug }, props: { term } }));
+}
+const { term } = Astro.props;
+const isOwner = term.slug === 'admin';
+---
+
+<TermPage tax="authors" term={term}>
+  {isOwner && <About slot="profile" author="admin" title="" />}
+</TermPage>

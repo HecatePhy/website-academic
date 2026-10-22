@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { featuredImage, formatDate, readingTime, inlineMd } from '../lib/utils';
+import AuthorList from './AuthorList.astro';
+import CategoryLinks from './CategoryLinks.astro';
+
+interface Props {
+  entry: CollectionEntry<'post'>;
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const url = `/post/${entry.id}/`;
+const img = featuredImage('post', entry.id);
+---
+
+<div class="stream-item">
+  <div class="media-body">
+    <div class="section-subheading"><a href={url}>{d.title}</a></div>
+    {d.summary && <a href={url} class="summary"><div class="summary" set:html={inlineMd(d.summary)} /></a>}
+    <div class="article-metadata">
+      <div><AuthorList authors={d.authors} /></div>
+      <span>Last updated on {formatDate(d.lastmod ?? d.date)}</span>
+      <span class="middot-divider"></span>
+      <span>{readingTime(entry.body)} min read</span>
+      <CategoryLinks categories={d.categories} />
+    </div>
+    {
+      d.projects?.length ? (
+        <div class="btn-links">
+          {d.projects.map((p) => (
+            <a class="btn" href={`/project/${p.toLowerCase()}/`}>Project</a>
+          ))}
+        </div>
+      ) : null
+    }
+  </div>
+  {
+    img && (
+      <div class="thumb">
+        <a href={url}><Image src={img} alt={d.title} width={300} /></a>
+      </div>
+    )
+  }
+</div>

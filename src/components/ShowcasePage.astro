@@ -1,0 +1,30 @@
+---
+// Single page for a project or an "otherworld" story.
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHeader from './PageHeader.astro';
+import LinkButtons from './LinkButtons.astro';
+import CategoryLinks from './CategoryLinks.astro';
+import TagList from './TagList.astro';
+import { featuredImage, formatDate } from '../lib/utils';
+
+interface Props {
+  entry: CollectionEntry<'project'> | CollectionEntry<'otherworld'>;
+  section: 'project' | 'otherworld';
+}
+const { entry, section } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+---
+
+<Base title={d.title} description={d.summary}>
+  <PageHeader title={d.title} image={featuredImage(section, entry.id)} caption={d.image?.caption} placement={d.image?.placement ?? 1}>
+    <div class="article-metadata"><span>Last updated on {formatDate(d.lastmod ?? d.date)}</span><CategoryLinks categories={d.categories} /></div>
+    <LinkButtons links={d.links} big />
+  </PageHeader>
+  <div class="article-container">
+    <div class="article-style"><Content /></div>
+    <slot />
+    <TagList tags={d.tags} />
+  </div>
+</Base>

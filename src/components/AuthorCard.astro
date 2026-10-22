@@ -1,0 +1,47 @@
+---
+// "About the author" card under posts and publications (only for the site owner).
+import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { avatarOf, iconClass } from '../lib/utils';
+import { termUrl } from '../lib/taxonomy';
+
+interface Props {
+  authors: string[];
+}
+const key = Astro.props.authors.find((a) => a === 'admin');
+const entry = key ? await getEntry('authors', key) : undefined;
+const a = entry?.data as any;
+const avatar = key ? avatarOf(key) : undefined;
+---
+
+{
+  a && (
+    <div class="author-card">
+      {avatar && (
+        <a href={termUrl('authors', key!)}>
+          <Image class="author-card-avatar" src={avatar} alt={a.title} width={120} height={120} />
+        </a>
+      )}
+      <div>
+        <div class="author-card-name">
+          <a href={termUrl('authors', key!)}>{a.title}</a>
+        </div>
+        {a.role && <div class="author-card-role">{a.role}</div>}
+        {a.bio && <p class="author-card-bio">{a.bio}</p>}
+        <ul class="author-card-social">
+          {(a.social ?? []).map((s: any) => {
+            const external = /^https?:/.test(s.link);
+            const href = external || s.link.startsWith('/') ? s.link : `/${s.link}`;
+            return (
+              <li>
+                <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined} aria-label={s.icon}>
+                  <i class={iconClass(s.icon, s.icon_pack)} />
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,32 @@
+---
+// Page for one attribute value, e.g. /tag/analog/: lists everything that has it.
+import Base from '../layouts/Base.astro';
+import ItemList from './ItemList.astro';
+import { TAXONOMIES, type Taxonomy, type Term } from '../lib/taxonomy';
+
+interface Props {
+  tax: Taxonomy;
+  term: Term;
+}
+const { tax, term } = Astro.props;
+const t = TAXONOMIES[tax];
+// With a profile on top (your own author page), use the full homepage width.
+const wrapper = Astro.slots.has('profile') ? 'container' : 'universal-wrapper';
+const indexUrl = tax === 'tags' ? '/tags/' : tax === 'categories' ? '/categories/' : tax === 'authors' ? '/authors/' : undefined;
+---
+
+<Base title={term.name} description={`${t.singular}: ${term.name}`}>
+  <div class={wrapper}>
+    <div class="term-header">
+      <div class="term-kind">
+        <i class={t.icon}></i>
+        {indexUrl ? <a href={indexUrl}>{t.singular}</a> : t.singular}
+      </div>
+      <h1 class="page-title">{term.name}</h1>
+    </div>
+  </div>
+  {Astro.slots.has('profile') && <div class="container author-profile"><slot name="profile" /></div>}
+  <div class={wrapper}>
+    <ItemList items={term.items} />
+  </div>
+</Base>

@@ -1,0 +1,24 @@
+---
+// Comma-separated author names, each linking to that author's page.
+import { authorName, isMe } from '../lib/utils';
+import { termUrl } from '../lib/taxonomy';
+
+interface Props {
+  authors: string[];
+  notes?: string[];
+}
+const { authors, notes = [] } = Astro.props;
+const names = await Promise.all(
+  authors.map(async (a) => ({ name: await authorName(a), me: isMe(a), url: termUrl('authors', a) })),
+);
+---
+
+{
+  names.map((n, i) => (
+    <>
+      <a href={n.url} class:list={['author-link', { 'author-highlighted': n.me }]}>{n.name}</a>
+      {notes[i] && <i class="fas fa-info-circle" title={notes[i]} style="padding-left:3px;cursor:help" />}
+      {i < names.length - 1 && ', '}
+    </>
+  ))
+}

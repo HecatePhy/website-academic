@@ -16,4 +16,4 @@ During the National Day Holidays in 2024, we participated in the National Olympi
 It was the first time that we competed against other baseball clubs in Beijing.
 Happy to win the championship with the best teammates!
 
-![AotiCup](team/aoticup.JPG "National Olympic Sports Center Cup Championship 2024!")
+![AotiCup](../../assets/media/team/aoticup.JPG "National Olympic Sports Center Cup Championship 2024!")

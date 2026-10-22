@@ -1,0 +1,48 @@
+---
+// Renders a list of Markdown "sections" (content/home/*.md, content/team/*.md, ...).
+// The `widget` field in each file's front matter picks the layout, as in Hugo:
+//   about | pages | contact | portfolio | blank (default: title left, text right)
+import { render } from 'astro:content';
+import About from './widgets/About.astro';
+import RecentPosts from './widgets/RecentPosts.astro';
+import Contact from './widgets/Contact.astro';
+import Portfolio from './widgets/Portfolio.astro';
+
+interface Props {
+  entries: any[];
+}
+const { entries } = Astro.props;
+const rendered = await Promise.all(entries.map(async (e) => ({ e, Content: (await render(e)).Content })));
+---
+
+{
+  rendered.map(({ e, Content }) => {
+    const d = e.data;
+    const twoCol = String(d.design?.columns ?? '2') === '2';
+    return (
+      <section id={e.id} class={`home-section wg-${d.widget ?? 'blank'}`}>
+        <div class="container">
+          {d.widget === 'about' ? (
+            <About author={d.author ?? 'admin'} title={d.title} />
+          ) : d.widget === 'portfolio' ? (
+            <Portfolio title={d.title} subtitle={d.subtitle} options={d.content ?? {}} />
+          ) : (
+            <div class:list={['section-row', { 'two-col': twoCol }]}>
+              <div class="section-heading">
+                {d.title && <h1>{d.title}</h1>}
+                {d.subtitle && <p>{d.subtitle}</p>}
+              </div>
+              <div>
+                {d.widget === 'pages' && <RecentPosts options={d.content ?? {}} />}
+                {d.widget === 'contact' && <Contact options={d.content ?? {}} />}
+                <div class="article-style">
+                  <Content />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  })
+}

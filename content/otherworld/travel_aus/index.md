@@ -44,7 +44,7 @@ An interesting fact is that, the view from the main entrance might be its least 
 The house looks much better from the ocean.
 It's fair enough to say when the architect designed the house, he was already imaging it within the Sydney coastline.
 
-{{<figure src="opera_house.jpg" caption="Main Entrance View">}}
+![Main Entrance View](opera_house.jpg "Main Entrance View")
 
 The royal botanic garden is right next to the opera house and is a fantastic spot to enjoy the harbour view.
 But my favourite memory is how perfect the grass is for a nap -- especially for a traverler who just stepped off a ten-plus-hour flight to Sydney.
@@ -56,7 +56,7 @@ There might actually be more birds than fish at the market.
 
 Australian white ibis has long legs and slender beak which make it surprisingly ideal for the job of waste sorting.
 
-{{<figure src="white_ibis.jpg" caption="Bin lover">}}
+![Bin lover](white_ibis.jpg "Bin lover")
 
 The local Sydney rock oysters were a bit of a letdown.
 But a more important takeaway is still this: do not eat fish outdoors, unless someone is looking to get robbed by seagulls.
@@ -67,13 +67,13 @@ They are professional bandits!
 
 While the streets of Sydney are practically a paradise for wild animals, we can still find plenty of unique animals at the zoo.
 
-{{<figure src="sleepy_koala.jpg" caption="Sleepy koala">}}
+![Sleepy koala](sleepy_koala.jpg "Sleepy koala")
 
-{{<figure src="emu.jpg" caption="Emu">}}
+![Emu](emu.jpg "Emu")
 
 The best-kept secret about Taronga zoo is that it's actually the premier spot for viewing the Sydney coastline.
 
-{{<figure src="taronga.jpg" caption="Giraffe and Opera House">}}
+![Giraffe and Opera House](taronga.jpg "Giraffe and Opera House")
 
 ### Whale Watch
 
@@ -94,13 +94,13 @@ The conditions were much gentler for out second trip out to sea, allowing us to 
 Right before a deep dive, whales perform one last breach and their tails rise high out of the water.
 These tails are just like fingerprints, which can be used by researchers to identify and document individual whales:
 
-{{<figure src="whale_tail.jpg" caption="Whale tail">}}
+![Whale tail](whale_tail.jpg "Whale tail")
 
 Besides chasing whales, we were lucky enough to be chased by dolphins!
 A large group of dolphins were jumping and frolicking around our small boat.
 We met some real-life siren:
 
-{{<figure src="dolphin.jpg" caption="Dancing with dolphins">}}
+![Dancing with dolphins](dolphin.jpg "Dancing with dolphins")
 
 ### Bondi Beach
 
@@ -109,7 +109,7 @@ Sandy beaches can be found everywhere.
 
 Beach volleyball seems appealing, but beach softball is even better.
 
-{{<figure src="bondi.jpg" caption="Bondi">}}
+![Bondi](bondi.jpg "Bondi")
 
 ## Cairns
 
@@ -117,7 +117,7 @@ Cairns feels just like one of those tropical resort towns you could see in a Net
 
 The airport is a small-town airport. Love the baggage carousels:
 
-{{<figure src="nemo.jpg" caption="Nemo!">}}
+![Nemo!](nemo.jpg "Nemo!")
 
 ### Great Barrier Reef
 
@@ -133,7 +133,7 @@ It's just a shame that no one can capture a dream within a photograph.
 In the Kuranda rainforest, we experienced the traditional hunting techniques by learning how to throw a boomerang.
 It made me realize that if someone had to rely on a boomerang for hunting, that poor guy would almost certainly starve to death.
 
-{{<figure src="boomerang.jpg" caption="A flying boomerang">}}
+![A flying boomerang](boomerang.jpg "A flying boomerang")
 
 We also tasted sausages made from emu and kangaroo meat.
 The sausages didn't taste all that unique.
@@ -159,13 +159,13 @@ I walked along the track, looking for lingering traces of grand prix.
 
 Plus, the circuit serves as an exceptional vantage point fot admiring the Melbourne skyline:
 
-{{<figure src="albert_park.jpg" caption="Albert park and city skyline">}}
+![Albert park and city skyline](albert_park.jpg "Albert park and city skyline")
 
 ### Puffing Billy Steam Train
 
 We rode a real steam train -  a genuine steam locomotive, not one of those fake amusement-park trains that just puff out white smoke!
 
-{{<figure src="steam.jpg" caption="Steam Train">}}
+![Steam Train](steam.jpg "Steam Train")
 
 The little train trolled through the temperate rainforest, with tall, straight trees towering alongside the rail.
 We sat on the window frames, pretending we were new loggers.
@@ -176,7 +176,7 @@ I tried to lure them over with some fries ... and ended up getting mugged by a l
 That bird is definitely a raptor -- the impact of its swoop scared me so badly to drop the fries.
 The smug predator:
 
-{{<figure src="chip_robber.jpg" caption="Laughing kookaburra">}}
+![Laughing kookaburra](chip_robber.jpg "Laughing kookaburra")
 
 ⚠️ a reminder: I was wrong - don't feed wild animals.
 
@@ -189,22 +189,22 @@ Little penguins came ashore in groups, riding the waves onto the beach.
 Some of the penguins that made it ashore first even went back into the sea to wait with other penguins for the next big wave.
 The cold wind and crashing waves really said how harsh and unforgiving nature can be.
 
-{{<figure src="penguins.jpg" caption="A group of penguins on their way back home">}}
+![A group of penguins on their way back home](penguins.jpg "A group of penguins on their way back home")
 
-{{<figure src="missing_p.jpg" caption="A lost little penguin">}}
+![A lost little penguin](missing_p.jpg "A lost little penguin")
 
 ### Great Ocean Road
 
 Winter isn't the ideal time to visit the Great Ocean Road.
 Inside the relentless winds and heavy mist, the landmarks of road were barely visible:
 
-{{<figure src="twelve_apostles.jpg" caption="Twelve Apostles amidst the piercing wind">}}
+![Twelve Apostles amidst the piercing wind](twelve_apostles.jpg "Twelve Apostles amidst the piercing wind")
 
 The rain started and stopped repeatedly, rewarding us with rainbows everywhere.
 This one was a perfect formed full rainbow:
 
-{{<figure src="rainbow.jpg" caption="Rainbow">}}
+![Rainbow](rainbow.jpg "Rainbow")
 
 Bonus: I feel like this lighthouse monster and I are twins.
 
-{{<figure src="lighthouse.jpg" caption="Lighthouse monster">}}
+![Lighthouse monster](lighthouse.jpg "Lighthouse monster")

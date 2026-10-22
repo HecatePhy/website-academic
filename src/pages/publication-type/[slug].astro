@@ -1,0 +1,10 @@
+---
+import TermPage from '../../components/TermPage.astro';
+import { terms } from '../../lib/taxonomy';
+
+export async function getStaticPaths() {
+  return (await terms('publication_types')).map((term) => ({ params: { slug: term.slug }, props: { term } }));
+}
+---
+
+<TermPage tax="publication_types" term={Astro.props.term} />

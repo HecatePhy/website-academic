@@ -1,0 +1,19 @@
+---
+import ShowcasePage from '../../components/ShowcasePage.astro';
+import ItemList from '../../components/ItemList.astro';
+import { sortedEntries } from '../../lib/utils';
+import { allItems } from '../../lib/taxonomy';
+
+export async function getStaticPaths() {
+  return (await sortedEntries('project')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+// Publications and posts that list this project in their `projects:` front matter.
+const related = (await allItems()).filter((it) =>
+  ((it.entry.data as { projects?: string[] }).projects ?? []).some((p) => p.toLowerCase() === entry.id),
+);
+---
+
+<ShowcasePage entry={entry} section="project">
+  {related.length > 0 && <div class="related"><ItemList items={related} /></div>}
+</ShowcasePage>
