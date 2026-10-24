@@ -8,11 +8,23 @@ import { publicationTypes } from '../../site.config';
 const pubs = await sortedEntries('publication');
 const types = [...new Set(pubs.map((p) => p.data.publication_types[0]))].sort();
 const years = [...new Set(pubs.map((p) => p.data.date?.getUTCFullYear()).filter(Boolean))];
+// "Selected" papers are the ones with `featured: true` in their front matter.
+const selectedCount = pubs.filter((p) => p.data.featured).length;
 ---
 
 <Base title="Publications">
   <div class="universal-wrapper">
-    <h1 class="page-title">Publications</h1>
+    <div class="pub-title-row">
+      <h1 class="page-title">Publications</h1>
+      {
+        selectedCount > 0 && (
+          <button id="pub-selected" class="selected-toggle" type="button" aria-pressed="false" title="Show selected publications only">
+            <i class="far fa-star" aria-hidden="true" />
+            <span>Selected</span>
+          </button>
+        )
+      }
+    </div>
     <div class="pub-filters">
       <input class="form-control" id="pub-search" type="search" placeholder="Search..." autocomplete="off" />
       <select class="form-control" id="pub-type">
@@ -27,6 +39,7 @@ const years = [...new Set(pubs.map((p) => p.data.date?.getUTCFullYear()).filter(
     <div id="pub-list">
       {pubs.map((p) => <PubItem entry={p} />)}
     </div>
+    <p id="pub-empty" class="muted" hidden>No publications match these filters.</p>
   </div>
   <CiteModal />
 </Base>
@@ -35,15 +48,38 @@ const years = [...new Set(pubs.map((p) => p.data.date?.getUTCFullYear()).filter(
   const q = document.getElementById('pub-search') as HTMLInputElement;
   const type = document.getElementById('pub-type') as HTMLSelectElement;
   const year = document.getElementById('pub-year') as HTMLSelectElement;
+  const selectedBtn = document.getElementById('pub-selected');
+  const empty = document.getElementById('pub-empty')!;
+  // "Selected" on/off is kept in the address (/publication/?selected) so the view can be shared.
+  let selectedOnly = new URLSearchParams(location.search).has('selected');
+
   const apply = () => {
     const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
     document.querySelectorAll<HTMLElement>('.pub-list-item').forEach((el) => {
       el.hidden = !(
+        (!selectedOnly || el.dataset.featured === 'true') &&
         (!type.value || el.dataset.type === type.value) &&
         (!year.value || el.dataset.year === year.value) &&
         terms.every((t) => el.dataset.search!.includes(t))
       );
+      if (!el.hidden) shown++;
     });
+    empty.hidden = shown > 0;
+    if (selectedBtn) {
+      selectedBtn.setAttribute('aria-pressed', String(selectedOnly));
+      selectedBtn.querySelector('i')!.className = selectedOnly ? 'fas fa-star' : 'far fa-star';
+    }
   };
+
+  selectedBtn?.addEventListener('click', () => {
+    selectedOnly = !selectedOnly;
+    const url = new URL(location.href);
+    if (selectedOnly) url.searchParams.set('selected', '');
+    else url.searchParams.delete('selected');
+    history.replaceState(null, '', url.toString().replace('selected=', 'selected'));
+    apply();
+  });
   [q, type, year].forEach((el) => el.addEventListener('input', apply));
+  apply();
 </script>

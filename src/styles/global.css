@@ -354,3 +354,22 @@ html.dark .badge:hover { background: #1565c0; color: #fff; }
   border: 1px solid var(--card-border); color: var(--text); transition: border-color 0.2s, color 0.2s;
 }
 .term-chip:hover { border-color: var(--link); color: var(--link); }
+
+/* "Selected" toggle next to the Publications title */
+.pub-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+.pub-title-row .page-title { margin: 0; }
+.selected-toggle {
+  display: inline-flex; align-items: center; gap: 0.45em;
+  font: inherit; font-size: 15px; font-weight: 500; line-height: 1;
+  padding: 0.55em 1.1em; border-radius: 999px; cursor: pointer;
+  color: var(--link); background: transparent; border: 1.5px solid currentColor;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+.selected-toggle:hover { box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.12); }
+.selected-toggle:active { transform: scale(0.96); }
+.selected-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.selected-toggle[aria-pressed='true'] { background: #1565c0; border-color: #1565c0; color: #fff; }
+.selected-toggle[aria-pressed='true'] i { color: #ffd54f; }
+html.dark .selected-toggle { color: #bbdefb; }
+html.dark .selected-toggle:hover { box-shadow: 0 0 0 4px rgba(187, 222, 251, 0.12); }
+html.dark .selected-toggle[aria-pressed='true'] { background: #1565c0; border-color: #1565c0; color: #fff; }
