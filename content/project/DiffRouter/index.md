@@ -1,9 +1,9 @@
 ---
-title: PAPRIKA-STDCELL
-summary: 'Design stdcell with better performance.'
+title: DiffRouter
+summary: ''
 tags:
-  - stdcell 
-date: '2023-01-01T00:00:00Z'
+  - FPGA 
+date: '2026-01-01T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 external_link: ''
@@ -12,11 +12,11 @@ image:
   caption: '[*Paprika*](https://www.imdb.com/title/tt0851578/) a film by Satoshi Kon'
   focal_point: Smart
 
-links:
-  - icon: github
-    icon_pack: fab
-    name: Follow
-    url: https://github.com/PKU-IDEA-Analog
+#links:
+#  - icon: github
+#    icon_pack: fab
+#    name: Follow
+#    url: https://github.com/PKU-IDEA-Analog
 #url_code: ''
 #url_pdf: ''
 #url_slides: ''
@@ -30,4 +30,4 @@ links:
 #slides: example
 ---
 
-test
+

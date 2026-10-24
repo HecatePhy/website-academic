@@ -71,8 +71,8 @@ featured: false
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-#projects:
-#  - example
+projects:
+  - PAPRIKA-AMS
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

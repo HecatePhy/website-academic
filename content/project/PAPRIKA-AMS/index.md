@@ -16,7 +16,7 @@ links:
   - icon: github
     icon_pack: fab
     name: Follow
-    url: https://github.com/PKU-IDEA-Analog
+    url: https://github.com/PKU-IDEA/PANDA
 #url_code: ''
 #url_pdf: ''
 #url_slides: ''
